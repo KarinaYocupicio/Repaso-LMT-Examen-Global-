@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LMT · Repaso para el Examen Global | Prepa 1 UANL</title>
+<meta name="description" content="Página de repaso interactiva para el examen global de La Materia y sus Transformaciones. Preparatoria No. 1, UANL.">
+<meta name="theme-color" content="#0b2350">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2350; --navy2:#16357a; --gold:#f5b800; --red:#d71920;
+  --bg:#f3f5fb; --card:#ffffff; --ink:#18213a; --muted:#5b6785; --line:#e3e8f3;
+  --ok:#14a35a; --okbg:#e6f7ee; --bad:#e0383e; --badbg:#fdecec; --warn:#f0a500; --warnbg:#fff6df;
+  --c:#2f6bff; --c2:#7aa2ff;
+  --r:18px; --sh:0 6px 24px rgba(17,35,80,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.55}
+h1,h2,h3,h4{font-family:"Poppins","Inter",system-ui,sans-serif;line-height:1.2;margin:0 0 .5em}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+sub,sup{font-size:.72em;line-height:0}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--navy),var(--navy2));color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.18)}
+.top-in{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:8px 14px}
+.logo{height:46px;width:auto;background:#fff;border-radius:10px;padding:3px}
+.brand{flex:1;min-width:0}
+.brand b{display:block;font-family:Poppins,sans-serif;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{opacity:.8;font-size:.78rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.count{background:var(--gold);color:var(--navy);font-weight:800;border-radius:999px;padding:5px 12px;font-size:.8rem;white-space:nowrap}
+nav.tabs{max-width:1100px;margin:auto;display:flex;gap:4px;padding:0 10px 8px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{color:#dfe7ff;text-decoration:none;padding:7px 14px;border-radius:999px;font-weight:600;font-size:.9rem;white-space:nowrap}
+nav.tabs a.on,nav.tabs a:hover{background:rgba(255,255,255,.16);color:#fff}
+.goldbar{height:4px;background:linear-gradient(90deg,var(--gold),var(--red))}
+
+main{max-width:1100px;margin:auto;padding:18px 14px 80px}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:20px;margin-bottom:16px}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:14px;padding:12px 20px;font-weight:700;background:var(--navy);color:#fff;text-decoration:none;transition:transform .12s,box-shadow .12s;box-shadow:0 4px 14px rgba(11,35,80,.25)}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--line);box-shadow:none}
+.btn.c{background:var(--c)}
+.btn.sm{padding:8px 14px;font-size:.9rem;border-radius:11px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:700;background:#eef2fb;color:var(--navy)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:28px 22px;color:#fff;background:radial-gradient(circle at 85% 20%,rgba(245,184,0,.35),transparent 40%),linear-gradient(135deg,#0b2350,#2f4fb5 60%,#7b2ff7);box-shadow:var(--sh);margin-bottom:18px}
+.hero h1{font-size:clamp(1.6rem,4.6vw,2.6rem);margin-bottom:.3em}
+.hero p{max-width:640px;opacity:.95;margin:.2em 0 1em}
+.hero .atoms{position:absolute;right:-30px;bottom:-40px;font-size:150px;opacity:.13;transform:rotate(-15deg);pointer-events:none}
+.hero .logos{display:flex;gap:10px;margin-bottom:14px}
+.hero .logos img{height:64px;background:#fff;border-radius:12px;padding:4px}
+.kpis{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 16px}
+.kpi{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:8px 14px;font-weight:600;font-size:.9rem}
+.kpi b{font-size:1.15rem;color:var(--gold)}
+
+/* ---------- Etapa cards ---------- */
+.et-card{position:relative;border-radius:20px;padding:18px;color:#fff;text-decoration:none;display:block;overflow:hidden;background:linear-gradient(135deg,var(--c),var(--c2));box-shadow:var(--sh);transition:transform .15s}
+.et-card:hover{transform:translateY(-4px) rotate(-.3deg)}
+.et-card .big{position:absolute;right:10px;bottom:-12px;font-size:84px;opacity:.25}
+.et-card h3{font-size:1.05rem;margin:.2em 0 .4em;max-width:85%}
+.et-card .n{font-weight:800;font-size:.78rem;letter-spacing:.08em;opacity:.9;text-transform:uppercase}
+.bar{height:9px;border-radius:9px;background:rgba(255,255,255,.3);overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;background:#fff;border-radius:9px;transition:width .6s}
+.bar.dark{background:#e9edf6}.bar.dark>i{background:var(--c)}
+.flag{position:absolute;top:12px;right:12px;font-size:.72rem;font-weight:800;border-radius:999px;padding:3px 9px;background:#fff;color:var(--bad)}
+.flag.mid{color:#a26b00}.flag.okf{color:var(--ok)}
+
+/* ---------- Topic list ---------- */
+.tlist a{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:14px 16px;text-decoration:none;box-shadow:var(--sh);border-left:6px solid var(--c);transition:transform .12s}
+.tlist a:hover{transform:translateX(4px)}
+.tlist .ic{font-size:1.8rem;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,#fff)}
+.tlist .tt{flex:1}.tlist .tt b{display:block}
+.score{font-weight:800;font-size:.85rem;border-radius:10px;padding:4px 9px;background:#eef2fb;color:var(--muted);white-space:nowrap}
+.score.ok{background:var(--okbg);color:var(--ok)}.score.mid{background:var(--warnbg);color:#a26b00}.score.bad{background:var(--badbg);color:var(--bad)}
+
+/* ---------- Topic page ---------- */
+.thead{border-radius:22px;padding:22px;color:#fff;background:linear-gradient(135deg,var(--c),var(--c2));margin-bottom:16px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.thead .big{position:absolute;right:14px;top:6px;font-size:80px;opacity:.3}
+.crumb{font-size:.85rem;opacity:.9}.crumb a{color:#fff}
+.flash{background:linear-gradient(135deg,#fff8dd,#fff);border:2px solid var(--gold);border-radius:18px;padding:16px 18px;font-size:1.05rem;font-weight:600}
+.flash .lbl{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#a26b00;font-weight:800;display:block;margin-bottom:4px}
+.points{list-style:none;padding:0;margin:0}
+.points li{padding:10px 12px 10px 40px;position:relative;border-bottom:1px dashed var(--line)}
+.points li:last-child{border-bottom:0}
+.points li:before{content:"✦";position:absolute;left:12px;top:9px;color:var(--c);font-size:1.1rem}
+.tip{background:#eef4ff;border-left:6px solid var(--c);border-radius:14px;padding:14px 16px}
+.tip b:first-child{color:var(--c)}
+.secttl{display:flex;align-items:center;gap:8px;font-family:Poppins,sans-serif;font-weight:700;font-size:1.1rem;margin:0 0 12px}
+.secttl .dot{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:.95rem}
+.vid{display:flex;gap:12px;align-items:center;padding:12px;border-radius:14px;background:#fff;border:2px solid var(--line);text-decoration:none;transition:border-color .15s,transform .15s}
+.vid:hover{border-color:var(--c);transform:translateY(-2px)}
+.vid .pl{width:46px;height:46px;flex:0 0 46px;border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff;font-size:1.1rem}
+.vid small{display:block;color:var(--muted)}
+.pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}
+
+/* ---------- Infographics ---------- */
+.info{border-radius:18px;padding:16px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 7%,#fff),#fff);border:1px solid var(--line);margin-bottom:12px;overflow-x:auto}
+.info h4{font-size:.95rem;color:var(--c);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.tree{display:flex;flex-direction:column;align-items:center;min-width:min-content}
+.tree .node{background:#fff;border:2px solid var(--c);border-radius:12px;padding:6px 12px;text-align:center;font-weight:700;font-size:.9rem;white-space:nowrap}
+.tree .node small{display:block;font-weight:500;color:var(--muted);font-size:.75rem}
+.tree .root{background:var(--c);color:#fff}.tree .root small{color:#eef}
+.tree .kids{display:flex;justify-content:center;position:relative;padding-top:14px}
+.tree .kids::before{content:"";position:absolute;top:0;left:50%;height:14px;border-left:2px solid var(--c2)}
+.tree .br{display:flex;flex-direction:column;align-items:center;position:relative;padding:14px 6px 0}
+.tree .br::before{content:"";position:absolute;top:0;left:50%;height:14px;border-left:2px solid var(--c2)}
+.tree .br::after{content:"";position:absolute;top:0;left:0;right:0;border-top:2px solid var(--c2)}
+.tree .br:first-child::after{left:50%}
+.tree .br:last-child::after{right:50%}
+.tree .br:only-child::after{display:none}
+.icards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.icard{background:#fff;border-radius:14px;padding:12px;text-align:center;border:1px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.icard .e{font-size:1.9rem}.icard b{display:block;color:var(--c)}.icard span{font-size:.85rem;color:var(--muted)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
+.step{flex:1 1 140px;background:#fff;border-radius:14px;padding:12px;border-top:5px solid var(--c);box-shadow:0 2px 8px rgba(0,0,0,.05);position:relative}
+.step b{display:block;color:var(--c);font-size:.92rem}.step span{font-size:.88rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{background:var(--c);color:#fff;font-weight:800;border-radius:10px;padding:6px 10px;font-family:ui-monospace,monospace}
+.chip.s{background:#2f6bff}.chip.p{background:#00a88f}.chip.d{background:#8b3dff}.chip.f{background:#ff6b2c}
+.arrow{color:var(--muted);font-weight:800}
+table.t{border-collapse:collapse;width:100%;font-size:.92rem;background:#fff;border-radius:12px;overflow:hidden}
+table.t th{background:var(--c);color:#fff;text-align:left;padding:8px 10px;font-size:.85rem}
+table.t td{padding:8px 10px;border-bottom:1px solid var(--line)}
+table.t tr:nth-child(even) td{background:#f8faff}
+.pt{display:grid;grid-template-columns:repeat(18,minmax(22px,1fr));gap:2px;min-width:520px;font-size:.62rem}
+.pt div{aspect-ratio:1;display:grid;place-items:center;border-radius:4px;color:#fff;font-weight:800}
+.pt .e0{background:transparent}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:.82rem}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:4px}
+.lewis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.lewis pre{margin:0;background:#fff;border-radius:12px;padding:12px;font:700 1.05rem/1.25 ui-monospace,Menlo,Consolas,monospace;text-align:center;border:1px solid var(--line);color:var(--navy)}
+.lewis figcaption{text-align:center;font-size:.82rem;color:var(--muted);margin-top:4px}
+.lewis figure{margin:0}
+.scale{position:relative;height:38px;border-radius:12px;display:flex;overflow:hidden;font-size:.78rem;font-weight:800;color:#fff}
+.scale div{display:grid;place-items:center;text-align:center;padding:0 4px}
+.ticks{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-top:4px}
+.eq{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:flex-end;font:800 1.5rem ui-monospace,Menlo,Consolas,monospace;padding:10px 0}
+.eq .p{display:flex;flex-direction:column;align-items:center}
+.eq .p small{font:600 .68rem Inter,sans-serif;color:var(--c);margin-top:4px;text-align:center;max-width:90px}
+.eq .co{color:var(--red)}.eq .st{color:#00a88f;font-size:1rem}
+.bridge{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+.bridge .bx{background:#fff;border:3px solid var(--c);border-radius:16px;padding:12px 16px;text-align:center;font-weight:800;min-width:110px}
+.bridge .bx.mid{background:var(--c);color:#fff}
+.bridge .ar{display:flex;flex-direction:column;align-items:center;font-size:.75rem;font-weight:700;color:var(--muted)}
+.bridge .ar b{font-size:1.4rem;color:var(--c)}
+
+/* ---------- Quiz ---------- */
+.quiz{border-radius:22px;background:#fff;box-shadow:var(--sh);padding:20px;border-top:6px solid var(--c)}
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;font-weight:700;color:var(--muted);font-size:.9rem}
+.qbar{height:10px;background:#e9edf6;border-radius:10px;overflow:hidden;margin-bottom:16px}
+.qbar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--c2));transition:width .4s}
+.qtext{font-size:1.15rem;font-weight:700;margin-bottom:14px;font-family:Poppins,sans-serif}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;background:#f6f8fd;border:2px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:600;color:var(--ink);transition:border-color .12s,background .12s,transform .1s}
+.opt:hover:not([disabled]){border-color:var(--c);background:#fff;transform:translateX(3px)}
+.opt .k{width:30px;height:30px;flex:0 0 30px;border-radius:9px;display:grid;place-items:center;background:#fff;border:2px solid var(--line);font-weight:800}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.ok .k{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{border-color:var(--bad);background:var(--badbg)}.opt.bad .k{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt[disabled]{cursor:default}
+.fb{margin-top:14px;border-radius:14px;padding:14px 16px;animation:pop .25s}
+.fb.ok{background:var(--okbg);border-left:6px solid var(--ok)}
+.fb.bad{background:var(--badbg);border-left:6px solid var(--bad)}
+.fb b.h{display:block;font-size:1.05rem;margin-bottom:4px}
+@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
+.res{text-align:center}
+.ring{--p:0;width:150px;height:150px;border-radius:50%;margin:6px auto 12px;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%),#e9edf6 0)}
+.ring div{width:118px;height:118px;border-radius:50%;background:#fff;display:grid;place-items:center;font:800 1.8rem Poppins,sans-serif}
+.stars{font-size:2rem;letter-spacing:4px}
+.ebars .r{display:flex;align-items:center;gap:10px;margin:8px 0}
+.ebars .r .lb{width:110px;font-weight:700;font-size:.9rem;text-align:left}
+.ebars .r .bar{flex:1;margin:0;height:14px}
+.ebars .r .v{width:60px;text-align:right;font-weight:800}
+.review{text-align:left;margin-top:12px}
+.review details{background:#f8faff;border-radius:12px;padding:10px 12px;margin:8px 0;border:1px solid var(--line)}
+.review summary{cursor:pointer;font-weight:700}
+.sem{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:800;font-size:.8rem}
+.sem.ok{background:var(--okbg);color:var(--ok)}.sem.mid{background:var(--warnbg);color:#a26b00}.sem.bad{background:var(--badbg);color:var(--bad)}
+input.inp{width:100%;padding:11px 12px;border-radius:12px;border:2px solid var(--line);font:inherit}
+input.inp:focus{outline:none;border-color:var(--navy2)}
+.foot{text-align:center;color:var(--muted);font-size:.82rem;padding:24px 10px}
+.foot img{height:36px;margin:0 6px;vertical-align:middle}
+.burst{position:fixed;pointer-events:none;font-size:26px;z-index:99;animation:fly 1.4s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--x),var(--y)) rotate(540deg);opacity:0}}
+#printArea{display:none}
+@media print{
+  body{background:#fff}
+  .top,main,.foot{display:none!important}
+  #printArea{display:block;padding:10px;font-size:12pt}
+  #printArea table{width:100%;border-collapse:collapse}
+  #printArea td,#printArea th{border:1px solid #999;padding:5px 7px;text-align:left}
+}
+@media (max-width:560px){
+  .logo{height:38px}.brand small{display:none}
+  .card{padding:16px}.quiz{padding:16px}
+  .qtext{font-size:1.05rem}
+  .hero .logos img{height:52px}
+}
+@media (max-width:640px){
+  .tree{align-items:stretch}
+  .tree .node{white-space:normal;text-align:left;display:inline-block}
+  .tree .kids{flex-direction:column;align-items:flex-start;padding:4px 0 0 0;margin-left:14px;border-left:2px solid var(--c2)}
+  .tree .kids::before,.tree .br::after{display:none}
+  .tree .br{align-items:flex-start;padding:8px 0 0 16px}
+  .tree .br::before{top:26px;left:0;height:0;width:14px;border-left:0;border-top:2px solid var(--c2)}
+  .eq{font-size:1.15rem}
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <img class="logo" data-logo="uanl" alt="UANL">
+    <div class="brand"><b>LMT · Repaso para el Examen Global</b><small>Academia de Química · Preparatoria No. 1 «Colegio Civil» · UANL</small></div>
+    <img class="logo" data-logo="p1" alt="Preparatoria No. 1">
+  </div>
+  <nav class="tabs">
+    <a href="#/" data-t="inicio">🏠 Inicio</a>
+    <a href="#/diagnostico" data-t="diagnostico">🎯 Diagnóstico</a>
+    <a href="#/etapas" data-t="etapas">📚 Etapas y temas</a>
+    <a href="#/simulacro" data-t="simulacro">🏁 Simulacro</a>
+    <a href="#/progreso" data-t="progreso">📊 Mi progreso</a>
+  </nav>
+  <div class="goldbar"></div>
+</header>
+<main id="app"></main>
+<footer class="foot"><img data-logo="uanl" alt="UANL"><img data-logo="p1" alt="Prepa 1"><br>
+  Academia de Química · Preparatoria No. 1 «Colegio Civil», UANL · Ago–Dic 2026<br>
+  Contenido basado en el libro <i>La Materia y sus Transformaciones</i> (PEMA 2026). Los videos pertenecen a sus respectivos autores.</footer>
+<div id="printArea"></div>
+<script>
+const LOGO_UANL = "data:image/jpeg;base64,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";
+const LOGO_P1 = "data:image/jpeg;base64,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";
+// ================================================================
+//  BANCO DE CONTENIDO — La Materia y sus Transformaciones (PEMA 2026)
+//  Basado en el libro de la UA (Prepa 1, UANL). Páginas = libro de texto.
+//  Formato de fórmulas: subíndices automáticos (H2O) y cargas con ^ (SO4^2-)
+// ================================================================
+const TU = "https://tinyurl.com/";
+
+const ETAPAS = [
+ {n:1, titulo:"Fundamentos básicos de la química y su estructura atómica", lema:"Explorando el mundo atómico", color:"#2f6bff", color2:"#7aa2ff", icon:"⚛️",
+  proposito:"Examinar los fundamentos de la química y los modelos atómicos para explicar fenómenos naturales mediante las leyes de la materia y la energía."},
+ {n:2, titulo:"Tabla periódica de los elementos y enlaces químicos", lema:"Conectando elementos", color:"#00a88f", color2:"#5fd8c4", icon:"🧪",
+  proposito:"Interpretar la estructura de la tabla periódica, las propiedades de los elementos y los tipos de enlace químico."},
+ {n:3, titulo:"Nomenclatura química según la IUPAC", lema:"Las fórmulas y nombres del mundo químico", color:"#8b3dff", color2:"#b98bff", icon:"🔤",
+  proposito:"Aplicar las reglas de nomenclatura y formulación para escribir y nombrar compuestos inorgánicos."},
+ {n:4, titulo:"Reacciones y ecuaciones químicas", lema:"Química que transforma", color:"#ff6b2c", color2:"#ffa37c", icon:"🔥",
+  proposito:"Interpretar, balancear y clasificar ecuaciones químicas y resolver cálculos estequiométricos."}
+];
+
+// ---------------- EXAMEN DIAGNÓSTICO (5 por etapa) ----------------
+const DIAGNOSTICO = [
+ {et:1, q:"¿Cuál de las siguientes es una mezcla heterogénea?", o:["Agua con arena","Aire","Agua con sal disuelta","Refresco"], a:0, e:"En el agua con arena se distinguen dos fases a simple vista y la arena se puede separar filtrando. El aire, el agua salada y el refresco tienen una sola fase: son mezclas homogéneas (disoluciones)."},
+ {et:1, q:"Cuando el agua de un charco se evapora, ocurre un:", o:["Cambio físico","Cambio químico","Cambio nuclear","Cambio de composición"], a:0, e:"El agua sigue siendo H2O, solo cambia de estado (líquido → gas). Si no se forman sustancias nuevas, es un cambio físico."},
+ {et:1, q:"¿Qué partícula subatómica tiene carga negativa?", o:["Electrón","Protón","Neutrón","Núcleo"], a:0, e:"El electrón tiene carga negativa y se mueve alrededor del núcleo. El protón es positivo y el neutrón no tiene carga; ambos están en el núcleo."},
+ {et:1, q:"El agua almacenada en lo alto de una presa tiene energía:", o:["Potencial","Cinética","Luminosa","Nuclear"], a:0, e:"La energía potencial depende de la posición o altura (Ep = m·g·h). Cuando el agua cae, esa energía se transforma en cinética y mueve las turbinas."},
+ {et:1, q:"¿Qué científico demostró, con el experimento de la lámina de oro, que el átomo tiene un núcleo pequeño y positivo?", o:["Ernest Rutherford","John Dalton","J. J. Thomson","Niels Bohr"], a:0, e:"Rutherford observó que unas pocas partículas alfa rebotaban en la lámina de oro: concluyó que casi todo el átomo está vacío y que su masa y carga positiva se concentran en un núcleo."},
+
+ {et:2, q:"La tabla periódica moderna ordena a los elementos según su:", o:["Número atómico (Z)","Masa atómica","Orden alfabético","Fecha de descubrimiento"], a:0, e:"Desde Moseley, los elementos se ordenan por número atómico (número de protones). Mendeléiev usó la masa atómica, pero eso generaba algunas inconsistencias."},
+ {et:2, q:"Las filas horizontales de la tabla periódica se llaman:", o:["Periodos","Grupos","Familias","Bloques"], a:0, e:"Hay 7 periodos (filas). El número del periodo indica cuántos niveles de energía tienen los átomos. Las columnas verticales son los grupos o familias."},
+ {et:2, q:"El enlace que mantiene unidos al sodio y al cloro en la sal de mesa (NaCl) es:", o:["Iónico","Covalente no polar","Metálico","Puente de hidrógeno"], a:0, e:"El sodio (metal) cede un electrón al cloro (no metal): se forman iones Na^+ y Cl^- que se atraen. La diferencia de electronegatividad es 2.1 (mayor de 1.7) → enlace iónico."},
+ {et:2, q:"¿Cuál es el elemento más electronegativo de la tabla periódica?", o:["Flúor (F)","Francio (Fr)","Sodio (Na)","Helio (He)"], a:0, e:"La electronegatividad aumenta hacia arriba y hacia la derecha. El flúor tiene el valor más alto (4.0)."},
+ {et:2, q:"Son brillantes, maleables y buenos conductores de calor y electricidad:", o:["Metales","No metales","Gases nobles","Metaloides"], a:0, e:"Brillo, maleabilidad, ductilidad y buena conductividad son propiedades características de los metales (cobre, hierro, oro, aluminio…)."},
+
+ {et:3, q:"El nombre correcto de NaCl es:", o:["Cloruro de sodio","Clorato de sodio","Sodio de cloro","Hipoclorito de sodio"], a:0, e:"Es una sal binaria: el no metal termina en -uro (cloro → cloruro) seguido de «de» y el nombre del metal."},
+ {et:3, q:"Un ion con carga negativa se llama:", o:["Anión","Catión","Isótopo","Neutrón"], a:0, e:"Los aniones se forman cuando un átomo gana electrones (normalmente no metales). Los cationes son positivos porque perdieron electrones."},
+ {et:3, q:"El NaOH (sosa cáustica) pertenece a la función química de los:", o:["Hidróxidos (bases)","Ácidos","Óxidos","Sales"], a:0, e:"Los hidróxidos se forman por un metal unido al ion hidróxido OH^-. Se nombran «hidróxido de + metal»: hidróxido de sodio."},
+ {et:3, q:"En el sistema Stock, el Fe2O3 se llama:", o:["Óxido de hierro (III)","Óxido de hierro (II)","Óxido ferroso","Dióxido de trihierro"], a:0, e:"Cada O tiene carga 2−: 3 × (−2) = −6. Esa carga se reparte entre 2 Fe → cada Fe es +3. Stock indica el número de oxidación con romano: óxido de hierro (III)."},
+ {et:3, q:"El H2SO4 es el ácido:", o:["Sulfúrico","Sulfhídrico","Sulfuroso","Hiposulfuroso"], a:0, e:"Es un oxiácido (tiene oxígeno). Con el azufre, el ácido con más oxígenos de la serie común es «-ico»: sulfúrico. El H2S (sin oxígeno) es el sulfhídrico."},
+
+ {et:4, q:"En una reacción química, las sustancias iniciales se llaman:", o:["Reactivos","Productos","Catalizadores","Precipitados"], a:0, e:"Los reactivos se escriben a la izquierda de la flecha y se transforman en productos (a la derecha)."},
+ {et:4, q:"«La masa no se crea ni se destruye, solo se transforma» es la ley de:", o:["Conservación de la masa (Lavoisier)","Proporciones múltiples (Dalton)","Periodicidad (Mendeléiev)","Gravitación (Newton)"], a:0, e:"Lavoisier demostró que la masa total de los reactivos es igual a la de los productos. Por eso las ecuaciones deben estar balanceadas."},
+ {et:4, q:"¿Cuáles son los coeficientes que balancean H2 + Cl2 → HCl?", o:["1, 1, 2","2, 1, 2","1, 2, 1","2, 2, 1"], a:0, e:"H2 + Cl2 → 2HCl: a la izquierda hay 2 H y 2 Cl; a la derecha, 2 HCl también tienen 2 H y 2 Cl."},
+ {et:4, q:"Una reacción que libera calor y luz, como la combustión del gas de la estufa, es:", o:["Exotérmica","Endotérmica","De descomposición","Reversible"], a:0, e:"Las reacciones exotérmicas liberan energía al entorno (calor/luz). Las endotérmicas, como la fotosíntesis, la absorben."},
+ {et:4, q:"La masa molar del agua (H2O) es: (H = 1, O = 16)", o:["18 g/mol","17 g/mol","16 g/mol","34 g/mol"], a:0, e:"2 H × 1 = 2, más 1 O × 16 = 16. Total: 18 g/mol."}
+];
+
+// ---------------- TEMAS ----------------
+const TEMAS = [
+// ===================== ETAPA 1 =====================
+{id:"e1t1", et:1, icon:"🔬", titulo:"La química y el enfoque científico", pag:"pp. 16–23",
+ resumen:"La química estudia de qué está hecha la materia, cómo es y cómo se transforma. Para investigar usa el método científico.",
+ puntos:[
+  "<b>Química:</b> ciencia que estudia la composición, estructura, propiedades y transformaciones de la materia, y la energía que interviene.",
+  "<b>Método científico:</b> observación → planteamiento del problema → hipótesis → experimentación → análisis de resultados → conclusión.",
+  "<b>Hipótesis:</b> posible explicación que todavía debe comprobarse con experimentos u observaciones.",
+  "<b>Se relaciona con otras ciencias:</b> biología (bioquímica), física (fisicoquímica), geología (geoquímica), medicina (farmacología), ecología (química ambiental).",
+  "Está en tu vida diaria: cocinar, encender la estufa (combustión), digerir alimentos, limpiar con jabón."],
+ info:[{type:"steps", titulo:"El método científico en 6 pasos", items:[
+   {t:"Observación",d:"Notas algo curioso: el pan se llena de moho."},
+   {t:"Problema",d:"¿Por qué se enmohece más rápido en unos lugares?"},
+   {t:"Hipótesis",d:"«La humedad acelera el crecimiento del moho»."},
+   {t:"Experimentación",d:"Pan en lugar seco vs. lugar húmedo."},
+   {t:"Análisis",d:"Comparas los resultados y los datos."},
+   {t:"Conclusión",d:"Aceptas o rechazas la hipótesis."}]}],
+ truco:"Si la frase empieza con «creo que…» o «tal vez…» y aún no se ha comprobado, es una <b>hipótesis</b>. Si ya se comprobó con datos, es una <b>conclusión</b>.",
+ videos:[{t:"¿Qué es la química y qué estudia?",u:TU+"yfw54ts2"},{t:"Breve historia de la química (Isaac Asimov)",u:TU+"492mj7bx"}],
+ preguntas:[
+  {q:"¿Qué estudia la química?", o:["La composición, estructura, propiedades y transformaciones de la materia","Únicamente a los seres vivos","El movimiento de los planetas","Solo las sustancias peligrosas del laboratorio"], a:0, e:"La química estudia toda la materia (viva o no) y sus cambios, junto con la energía que interviene."},
+  {q:"Un alumno nota que el pan se enmohece más rápido en un lugar húmedo y propone: «la humedad acelera el crecimiento del moho». ¿Qué paso del método científico es?", o:["Hipótesis","Conclusión","Observación","Experimentación"], a:0, e:"Es una posible explicación que aún debe comprobarse con un experimento: eso es una hipótesis."},
+  {q:"¿Cuál es el orden correcto del método científico?", o:["Observación → problema → hipótesis → experimentación → conclusión","Hipótesis → observación → conclusión → experimentación","Experimentación → hipótesis → observación → conclusión","Conclusión → problema → hipótesis → observación"], a:0, e:"Primero observas, luego planteas la pregunta, propones una hipótesis, la pruebas y finalmente concluyes."},
+  {q:"El estudio de las reacciones químicas que ocurren en los seres vivos (digestión, respiración celular) corresponde a la:", o:["Bioquímica","Geoquímica","Astroquímica","Fisicoquímica"], a:0, e:"La bioquímica une biología y química: estudia las moléculas y reacciones de los seres vivos."},
+  {q:"¿Qué hace que una hipótesis sea científica?", o:["Que se pueda comprobar con experimentos u observaciones","Que la diga un experto","Que sea muy extensa","Que nadie pueda ponerla a prueba"], a:0, e:"Una hipótesis científica debe poder ponerse a prueba; si no se puede comprobar, no es científica."},
+  {q:"¿Cuál es un ejemplo de química en tu vida diaria?", o:["Encender la estufa (combustión del gas)","Medir la distancia a la escuela","Contar a los alumnos del grupo","Leer un mapa"], a:0, e:"Al encender la estufa, el gas reacciona con el oxígeno del aire y se forman sustancias nuevas (CO2 y agua) liberando energía: es una reacción química."}
+ ]},
+
+{id:"e1t2", et:1, icon:"🧊", titulo:"Clasificación de la materia", pag:"pp. 24–27",
+ resumen:"Materia es todo lo que tiene masa y ocupa un lugar. Se divide en sustancias puras (elementos y compuestos) y mezclas (homogéneas y heterogéneas).",
+ puntos:[
+  "<b>Sustancia pura:</b> composición fija y constante. Puede ser <b>elemento</b> (no se descompone: Au, Cu, O2) o <b>compuesto</b> (dos o más elementos en proporción fija; solo se separan por medios químicos: H2O, NaCl, CaCO3).",
+  "<b>Mezcla:</b> unión física de dos o más sustancias que conservan sus propiedades; se separan por métodos físicos (filtrar, decantar, evaporar, imantar).",
+  "<b>Homogénea (disolución):</b> una sola fase, no se distinguen sus componentes: aire, refresco, agua salada, aleaciones (bronce, acero).",
+  "<b>Heterogénea:</b> se distinguen sus fases: agua y aceite, ensalada, agua con arena.",
+  "<b>Suspensión:</b> heterogénea que se asienta (sedimenta) al reposar: medicamento en polvo que se agita. <b>Coloide:</b> no se asienta y dispersa la luz: leche, gelatina, niebla."],
+ info:[{type:"tree", titulo:"Mapa de la materia", root:{t:"MATERIA",c:[
+   {t:"Sustancias puras",d:"composición fija",c:[{t:"Elementos",d:"Au, Cu, O2"},{t:"Compuestos",d:"H2O, NaCl"}]},
+   {t:"Mezclas",d:"unión física",c:[{t:"Homogéneas",d:"aire, refresco"},{t:"Heterogéneas",d:"agua y aceite",c:[{t:"Suspensiones",d:"se asientan"},{t:"Coloides",d:"leche, gelatina"}]}]}]}}],
+ truco:"¿Tiene fórmula química? → <b>sustancia pura</b>. ¿Se separa filtrando, evaporando o con un imán? → <b>mezcla</b>. ¿Ves dos fases? → <b>heterogénea</b>.",
+ videos:[{t:"Clasificación de la materia",u:TU+"4zkrcmtk"},{t:"Diferencias entre mezclas homogéneas y heterogéneas",u:TU+"utdzkeaz"}],
+ preguntas:[
+  {q:"El agua destilada (H2O) es un:", o:["Compuesto","Elemento","Mezcla homogénea","Mezcla heterogénea"], a:0, e:"El agua está formada por dos elementos (H y O) en proporción fija: es un compuesto, una sustancia pura."},
+  {q:"¿Cuál de los siguientes es un elemento?", o:["Cobre (Cu)","Sal de mesa (NaCl)","Aire","Agua de mar"], a:0, e:"El cobre está formado por un solo tipo de átomo y no puede descomponerse en sustancias más simples."},
+  {q:"El aire que respiramos es una:", o:["Mezcla homogénea","Mezcla heterogénea","Sustancia pura","Elemento"], a:0, e:"El aire es una mezcla de gases (N2, O2, Ar, CO2…) con una sola fase visible: mezcla homogénea."},
+  {q:"La leche tiene partículas que no se asientan y dispersan la luz. Es un:", o:["Coloide","Suspensión","Disolución","Compuesto"], a:0, e:"Los coloides tienen partículas de tamaño intermedio: no sedimentan y dispersan la luz (efecto Tyndall)."},
+  {q:"Un medicamento en polvo que se debe agitar antes de tomarlo porque se asienta en el fondo es una:", o:["Suspensión","Disolución","Coloide","Sustancia pura"], a:0, e:"En las suspensiones el sólido es insoluble y se sedimenta al dejarlo en reposo."},
+  {q:"¿Cuál es la diferencia principal entre un compuesto y una mezcla?", o:["El compuesto tiene composición fija y solo se separa por métodos químicos","La mezcla siempre es líquida","El compuesto se separa filtrando","La mezcla tiene una fórmula química"], a:0, e:"En el compuesto los elementos están unidos químicamente en proporción fija; en la mezcla solo están juntos físicamente y en cualquier proporción."},
+  {q:"El bronce (aleación de cobre y estaño) es una:", o:["Mezcla homogénea","Mezcla heterogénea","Compuesto","Elemento"], a:0, e:"Las aleaciones son disoluciones sólidas: sus componentes están distribuidos uniformemente (una sola fase)."}
+ ]},
+
+{id:"e1t3", et:1, icon:"💧", titulo:"Estados, propiedades y cambios de la materia", pag:"pp. 27–31",
+ resumen:"La materia existe en distintos estados, tiene propiedades que la identifican y puede sufrir cambios físicos (sin sustancias nuevas) o químicos (con sustancias nuevas).",
+ puntos:[
+  "<b>Estados:</b> sólido (forma y volumen fijos), líquido (volumen fijo, toma la forma del recipiente), gas (sin forma ni volumen fijos), plasma (gas ionizado: rayos, el Sol) y condensado de Bose-Einstein (cerca del cero absoluto).",
+  "<b>Propiedades generales</b> (las tiene toda la materia): masa, volumen, peso, inercia, impenetrabilidad, porosidad.",
+  "<b>Propiedades específicas</b> (identifican a cada sustancia): <b>físicas</b> (color, densidad, dureza, punto de ebullición) y <b>químicas</b> (combustión, oxidación, corrosión, reactividad).",
+  "<b>Cambio físico:</b> no cambia la composición (fundir, doblar, disolver). <b>Cambio químico:</b> se forman sustancias nuevas (quemar, oxidar, cocinar).",
+  "<b>Cambios de estado endotérmicos</b> (absorben energía): fusión, evaporación, sublimación. <b>Exotérmicos</b> (liberan energía): solidificación, condensación, deposición."],
+ info:[{type:"table", titulo:"Cambios de estado", head:["Cambio","De → a","Energía","Ejemplo"], rows:[
+   ["Fusión","sólido → líquido","Absorbe 🔺","Hielo que se derrite"],
+   ["Evaporación","líquido → gas","Absorbe 🔺","Vapor del té caliente"],
+   ["Sublimación","sólido → gas","Absorbe 🔺","Hielo seco, pastillas aromatizantes"],
+   ["Solidificación","líquido → sólido","Libera 🔻","Chocolate en moldes"],
+   ["Condensación","gas → líquido","Libera 🔻","Gotitas en un vaso frío"],
+   ["Deposición","gas → sólido","Libera 🔻","Escarcha"]]}],
+ truco:"Pregúntate: <b>¿apareció una sustancia nueva?</b> Si sí (cambio de color, gas, olor, calor) → cambio químico. Si solo cambió la forma o el estado → cambio físico.",
+ videos:[{t:"Estados de agregación de la materia",u:TU+"26ebrjrh"},{t:"¿Qué es el condensado de Bose-Einstein?",u:TU+"3vc3xnc5"},{t:"Cambios físicos y cambios químicos",u:TU+"47uyauma"}],
+ preguntas:[
+  {q:"El hielo seco pasa directamente de sólido a gas. Este cambio se llama:", o:["Sublimación","Evaporación","Fusión","Condensación"], a:0, e:"La sublimación es el paso de sólido a gas sin pasar por líquido; absorbe energía."},
+  {q:"Se forman gotitas por fuera de un vaso con agua muy fría. ¿Qué cambio ocurrió?", o:["Condensación","Evaporación","Sublimación","Fusión"], a:0, e:"El vapor de agua del aire se enfría al tocar el vaso y pasa de gas a líquido: condensación (libera energía)."},
+  {q:"¿Cuál es un cambio químico?", o:["Quemar papel","Cortar papel","Derretir hielo","Disolver azúcar en agua"], a:0, e:"Al quemar papel se forman sustancias nuevas (CO2, agua, ceniza). Los demás solo cambian forma o estado."},
+  {q:"¿Cuál es una propiedad GENERAL de la materia?", o:["Masa","Densidad","Punto de ebullición","Combustión"], a:0, e:"Toda la materia tiene masa. La densidad y el punto de ebullición son propiedades específicas físicas; la combustión es química."},
+  {q:"La capacidad del hierro para oxidarse (hacerse óxido) es una propiedad:", o:["Química","Física","General","De estado"], a:0, e:"Describe cómo reacciona con otra sustancia (oxígeno) formando una sustancia nueva: es propiedad química."},
+  {q:"¿Cuál de estos cambios de estado es endotérmico (absorbe energía)?", o:["Fusión","Solidificación","Condensación","Deposición"], a:0, e:"Para fundir un sólido hay que darle calor. Solidificación, condensación y deposición liberan energía."},
+  {q:"¿En qué estado de la materia se encuentran los rayos y el Sol?", o:["Plasma","Gas","Condensado de Bose-Einstein","Líquido"], a:0, e:"El plasma es un gas ionizado a muy alta temperatura: está en el Sol, los rayos y las auroras."}
+ ]},
+
+{id:"e1t4", et:1, icon:"⚡", titulo:"La energía y sus fuentes", pag:"pp. 33–39",
+ resumen:"La energía es la capacidad de producir un cambio. No se crea ni se destruye, solo se transforma, y se obtiene de fuentes renovables y no renovables.",
+ puntos:[
+  "<b>Ley de la conservación de la energía:</b> la energía no se crea ni se destruye, solo se transforma.",
+  "<b>Cinética</b> (movimiento): Ec = ½ mv^2. <b>Potencial</b> (posición): Ep = m·g·h. <b>Química:</b> almacenada en los enlaces. <b>Nuclear:</b> E = mc^2 (fisión y fusión).",
+  "<b>Térmica</b> (calor): Q = m·Ce·ΔT. <b>Luminosa</b> (fotones): E = h·f. <b>Eléctrica</b> (movimiento de electrones): E = P·t.",
+  "<b>Renovables:</b> solar, eólica, hidráulica, geotérmica, mareomotriz y biomasa. <b>No renovables:</b> petróleo, carbón y gas natural. La <b>nuclear</b> no emite gases contaminantes, pero usa uranio (recurso limitado) y produce desechos radiactivos.",
+  "Fenómenos eléctricos naturales: rayos, auroras polares, efecto triboeléctrico y bioluminiscencia (luciérnagas)."],
+ info:[{type:"cards", titulo:"Formas de energía", items:[
+   {i:"🏃",t:"Cinética",d:"Ec = ½ mv^2"},{i:"⛰️",t:"Potencial",d:"Ep = m·g·h"},{i:"🔋",t:"Química",d:"En los enlaces"},
+   {i:"☢️",t:"Nuclear",d:"E = mc^2"},{i:"🌡️",t:"Térmica",d:"Q = m·Ce·ΔT"},{i:"💡",t:"Luminosa",d:"E = h·f"},{i:"🔌",t:"Eléctrica",d:"E = P·t"}]},
+  {type:"cards", titulo:"Fuentes renovables", items:[
+   {i:"☀️",t:"Solar",d:"Paneles de silicio"},{i:"🌬️",t:"Eólica",d:"Viento"},{i:"💧",t:"Hidráulica",d:"Caída de agua"},
+   {i:"🌋",t:"Geotérmica",d:"Calor de la Tierra"},{i:"🌊",t:"Mareomotriz",d:"Mareas"},{i:"🌿",t:"Biomasa",d:"Residuos orgánicos"}]}],
+ truco:"<b>Cinética = movimiento</b> (algo que se mueve). <b>Potencial = posición</b> (algo que está alto y puede caer). Fíjate en el verbo de la pregunta.",
+ videos:[{t:"¿Qué es la energía?",u:TU+"2t98cyc8"},{t:"Energías renovables y no renovables",u:TU+"3bpedtt6"},{t:"¿Cómo se forma el rayo?",u:TU+"4tf2j4v7"}],
+ preguntas:[
+  {q:"Un automóvil que circula por la carretera posee energía:", o:["Cinética","Potencial","Nuclear","Luminosa"], a:0, e:"La energía cinética es la que tiene un cuerpo por estar en movimiento."},
+  {q:"La fórmula E = mc^2 representa la energía:", o:["Nuclear","Térmica","Cinética","Eléctrica"], a:0, e:"Einstein relacionó masa y energía: en la fisión y la fusión nuclear una pequeña masa se convierte en muchísima energía."},
+  {q:"¿Cuál es una fuente de energía renovable?", o:["Eólica","Petróleo","Carbón","Gas natural"], a:0, e:"El viento no se agota. Petróleo, carbón y gas natural son combustibles fósiles: no renovables."},
+  {q:"En una pila o batería, la energía química se transforma en energía:", o:["Eléctrica","Nuclear","Potencial","Eólica"], a:0, e:"Dentro de la pila ocurren reacciones químicas que producen un flujo de electrones: corriente eléctrica."},
+  {q:"La ley de la conservación de la energía dice que la energía:", o:["No se crea ni se destruye, solo se transforma","Se crea al encender un aparato","Se destruye al usarse","Solo existe en forma de calor"], a:0, e:"La energía cambia de una forma a otra (química → eléctrica → luminosa), pero la cantidad total se conserva."},
+  {q:"La energía que se obtiene del calor del interior de la Tierra es:", o:["Geotérmica","Mareomotriz","Biomasa","Solar"], a:0, e:"«Geo» = Tierra, «térmica» = calor. Se aprovecha el vapor de yacimientos subterráneos para mover turbinas."},
+  {q:"Un balón de 0.5 kg se mueve a 10 m/s. ¿Cuál es su energía cinética? (Ec = ½ mv^2)", o:["25 J","2.5 J","50 J","5 J"], a:0, e:"Ec = ½ × 0.5 kg × (10 m/s)^2 = 0.25 × 100 = 25 J. ¡Recuerda elevar la velocidad al cuadrado!"}
+ ]},
+
+{id:"e1t5", et:1, icon:"🪐", titulo:"Modelos atómicos y partículas subatómicas", pag:"pp. 40–60",
+ resumen:"La idea del átomo cambió con cada experimento: de una esfera sólida (Dalton) a un núcleo con electrones en zonas de probabilidad (Schrödinger).",
+ puntos:[
+  "<b>Dalton (1808):</b> el átomo es una esfera sólida e indivisible; los átomos de un mismo elemento son iguales.",
+  "<b>Thomson (1897):</b> descubre el electrón con rayos catódicos. Modelo del «budín de pasas».",
+  "<b>Rutherford (1911):</b> experimento de la lámina de oro → núcleo pequeño, denso y positivo; el átomo es casi todo espacio vacío.",
+  "<b>Bohr (1913):</b> los electrones giran en órbitas o niveles de energía definidos; al saltar entre niveles absorben o emiten energía (colores del ensayo a la flama).",
+  "<b>Schrödinger (1926):</b> modelo cuántico; los electrones están en <b>orbitales</b>: regiones donde es más probable encontrarlos.",
+  "<b>Z (número atómico)</b> = protones. <b>A (número de masa)</b> = protones + neutrones. <b>Neutrones = A − Z</b>. <b>Isótopos:</b> mismo Z, distinto número de neutrones."],
+ info:[{type:"steps", titulo:"Línea del tiempo del átomo", items:[
+   {t:"Dalton · 1808",d:"⚪ Esfera sólida indivisible"},{t:"Thomson · 1897",d:"🍮 Budín de pasas (electrón)"},
+   {t:"Rutherford · 1911",d:"🎯 Núcleo positivo + vacío"},{t:"Bohr · 1913",d:"🪐 Órbitas con energía fija"},
+   {t:"Schrödinger · 1926",d:"☁️ Orbitales (probabilidad)"}]},
+  {type:"table", titulo:"Partículas subatómicas", head:["Partícula","Carga","Ubicación"], rows:[["Protón (p^+)","Positiva (+1)","Núcleo"],["Neutrón (n^0)","Sin carga (0)","Núcleo"],["Electrón (e^-)","Negativa (−1)","Alrededor del núcleo"]]}],
+ truco:"Para neutrones: <b>A − Z</b>. Ejemplo: sodio, A = 23, Z = 11 → 23 − 11 = <b>12 neutrones</b>. En un átomo neutro, electrones = protones.",
+ videos:[{t:"Modelos atómicos",u:TU+"spavrkt6"},{t:"Experimento de J. J. Thomson",u:TU+"5bbv4btj"},{t:"¿Fuego de colores? (ensayo a la flama)",u:TU+"bdek8hw5"},{t:"Orbitales atómicos",u:TU+"2mtpvv9a"}],
+ preguntas:[
+  {q:"¿Qué científico propuso el modelo del «budín de pasas»?", o:["J. J. Thomson","John Dalton","Ernest Rutherford","Erwin Schrödinger"], a:0, e:"Thomson imaginó una esfera positiva con electrones incrustados, como pasas en un budín, después de descubrir el electrón."},
+  {q:"El experimento de la lámina de oro de Rutherford demostró que:", o:["El átomo tiene un núcleo pequeño, denso y positivo","Los electrones giran en órbitas fijas","El átomo es una esfera sólida","Los electrones están en orbitales"], a:0, e:"Como casi todas las partículas atravesaban la lámina y unas pocas rebotaban, concluyó que hay un núcleo diminuto y positivo y mucho espacio vacío."},
+  {q:"¿Qué modelo explica los colores del ensayo a la flama por los saltos de electrones entre niveles de energía?", o:["Bohr","Dalton","Thomson","Rutherford"], a:0, e:"Bohr propuso niveles de energía: cuando un electrón regresa a un nivel más bajo emite luz de un color característico."},
+  {q:"El sodio tiene Z = 11 y A = 23. ¿Cuántos neutrones tiene?", o:["12","11","23","34"], a:0, e:"Neutrones = A − Z = 23 − 11 = 12."},
+  {q:"¿Qué partícula se encuentra en el núcleo y NO tiene carga?", o:["Neutrón","Protón","Electrón","Fotón"], a:0, e:"El neutrón es neutro y, junto con el protón, forma el núcleo."},
+  {q:"Los isótopos son átomos de un mismo elemento con:", o:["Igual número de protones y distinto número de neutrones","Distinto número de protones","Igual número de masa","Distinto número de electrones y protones"], a:0, e:"Ejemplo: carbono-12 y carbono-14. Ambos tienen 6 protones, pero 6 y 8 neutrones."},
+  {q:"Según el modelo de Schrödinger, un orbital es:", o:["La región donde es más probable encontrar un electrón","Una órbita circular fija","El centro del átomo","Una partícula positiva"], a:0, e:"El modelo cuántico no habla de trayectorias exactas sino de probabilidades: los orbitales son «nubes» de probabilidad."},
+  {q:"¿Cuál es el orden cronológico correcto de los modelos atómicos?", o:["Dalton → Thomson → Rutherford → Bohr → Schrödinger","Thomson → Dalton → Bohr → Rutherford → Schrödinger","Bohr → Rutherford → Thomson → Dalton → Schrödinger","Dalton → Rutherford → Thomson → Schrödinger → Bohr"], a:0, e:"Cada modelo corrigió al anterior: 1808, 1897, 1911, 1913 y 1926."}
+ ]},
+
+{id:"e1t6", et:1, icon:"🧩", titulo:"Configuración electrónica y números cuánticos", pag:"pp. 58–66",
+ resumen:"La configuración electrónica es la «dirección» de los electrones: indica en qué nivel y subnivel está cada uno, llenando de menor a mayor energía.",
+ puntos:[
+  "<b>Números cuánticos:</b> n = nivel (1 a 7); ℓ = subnivel o forma (s = 0, p = 1, d = 2, f = 3); mℓ = orientación del orbital; s = giro del electrón (+½ o −½).",
+  "<b>Capacidad máxima:</b> s = 2, p = 6, d = 10, f = 14 electrones.",
+  "<b>Principio de Aufbau (regla de las diagonales):</b> se llena de menor a mayor energía: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p 7s 5f 6d 7p.",
+  "<b>Principio de exclusión de Pauli:</b> en un orbital caben máximo 2 electrones y con giros opuestos (↑↓).",
+  "<b>Regla de Hund:</b> en orbitales de igual energía, primero se coloca un electrón en cada uno y después se aparean.",
+  "<b>Electrones de valencia:</b> los del último nivel. Ej. O (Z = 8): 1s^2 2s^2 2p^4 → 6 electrones de valencia."],
+ info:[{type:"chips", titulo:"Orden de llenado (sigue las flechas)", items:["1s","2s","2p","3s","3p","4s","3d","4p","5s","4d","5p","6s","4f","5d","6p","7s","5f","6d","7p"]},
+  {type:"table", titulo:"Subniveles", head:["Subnivel","ℓ","Orbitales","Máx. e^-"], rows:[["s","0","1","2"],["p","1","3","6"],["d","2","5","10"],["f","3","7","14"]]}],
+ truco:"Suma los superíndices: deben dar <b>Z</b>. Ej. Na (Z = 11): 1s^2 2s^2 2p^6 3s^1 → 2 + 2 + 6 + 1 = 11 ✔️. ¡Ojo! El <b>4s se llena antes que el 3d</b>.",
+ videos:[{t:"Configuración electrónica (video del libro)",u:TU+"4xc7fbux"},{t:"Quince minutos en la vida de un electrón",u:TU+"2ed3d28a"}],
+ preguntas:[
+  {q:"¿Cuál es la configuración electrónica del sodio (Z = 11)?", o:["1s^2 2s^2 2p^6 3s^1","1s^2 2s^2 2p^7","1s^2 2s^2 2p^6 3p^1","1s^2 2s^8 3s^1"], a:0, e:"Se llenan 1s (2), 2s (2), 2p (6) = 10, y el electrón 11 va al 3s. El subnivel p admite máximo 6 y el s máximo 2."},
+  {q:"¿Cuántos electrones caben como máximo en un subnivel d?", o:["10","6","2","14"], a:0, e:"El subnivel d tiene 5 orbitales × 2 electrones = 10."},
+  {q:"El principio de exclusión de Pauli establece que:", o:["Un orbital admite máximo dos electrones con giros opuestos","Los electrones llenan primero los niveles altos","Todos los electrones tienen el mismo giro","Un orbital admite hasta ocho electrones"], a:0, e:"Dos electrones de un átomo no pueden tener los cuatro números cuánticos iguales, por eso en un orbital van ↑↓."},
+  {q:"Según la regla de las diagonales, después de llenar el 4s sigue el subnivel:", o:["3d","4p","4d","5s"], a:0, e:"El 3d tiene menor energía que el 4p, así que se llena primero: …4s → 3d → 4p…"},
+  {q:"El cloro (Z = 17) tiene la configuración 1s^2 2s^2 2p^6 3s^2 3p^5. ¿Cuántos electrones de valencia tiene?", o:["7","5","17","2"], a:0, e:"Los electrones de valencia son los del último nivel (n = 3): 3s^2 + 3p^5 = 7."},
+  {q:"El número cuántico ℓ = 1 corresponde al subnivel:", o:["p","s","d","f"], a:0, e:"s = 0, p = 1, d = 2, f = 3."},
+  {q:"¿En qué subnivel termina la configuración del calcio (Z = 20)?", o:["4s^2","3d^2","4p^2","3p^2"], a:0, e:"1s^2 2s^2 2p^6 3s^2 3p^6 = 18 electrones; los 2 restantes van al 4s, que se llena antes que el 3d."}
+ ]},
+
+// ===================== ETAPA 2 =====================
+{id:"e2t1", et:2, icon:"🗂️", titulo:"Historia y organización de la tabla periódica", pag:"pp. 86–103",
+ resumen:"La tabla periódica acomoda los 118 elementos por número atómico en grupos (columnas) y periodos (filas), y en bloques s, p, d y f.",
+ puntos:[
+  "<b>Historia:</b> Döbereiner (triadas) → Newlands (octavas) → <b>Mendeléiev (1869)</b>, ordenó por masa atómica y dejó huecos para elementos aún no descubiertos → <b>Moseley</b>, ordenó por número atómico.",
+  "<b>Hoy:</b> 118 elementos ordenados por <b>número atómico (Z)</b>.",
+  "<b>Grupos o familias:</b> 18 columnas. Tienen los mismos electrones de valencia → propiedades químicas parecidas. 1 = alcalinos, 2 = alcalinotérreos, 17 = halógenos, 18 = gases nobles.",
+  "<b>Periodos:</b> 7 filas. El número de periodo = número de niveles de energía (el n más alto de la configuración).",
+  "<b>Bloques:</b> s (grupos 1–2), d (metales de transición, 3–12), p (13–18) y f (lantánidos y actínidos), según el subnivel donde termina la configuración.",
+  "<b>Casilla:</b> símbolo, nombre, número atómico, masa atómica (uma) y, en algunas tablas, electronegatividad, estados de oxidación y configuración."],
+ info:[{type:"ptable", mode:"bloques", titulo:"Bloques de la tabla periódica"}],
+ truco:"Configuración que termina en <b>3p^5</b>: el <b>3</b> te da el periodo (3) y el bloque es p. Electrones de valencia 3s^2 3p^5 = 7 → grupo 17 (halógenos): ¡es el cloro!",
+ videos:[{t:"Introducción a la tabla periódica",u:TU+"djwmn6px"},{t:"La tabla periódica de los elementos",u:TU+"mu3ychc5"},{t:"El origen de los elementos",u:TU+"jvnrxvsw"},{t:"Tabla periódica interactiva",u:TU+"3f7ejrrz"}],
+ preguntas:[
+  {q:"Mendeléiev es reconocido porque:", o:["Ordenó los elementos por masa atómica y dejó huecos para elementos no descubiertos","Descubrió el electrón","Ordenó los elementos por número atómico","Propuso las octavas"], a:0, e:"Mendeléiev predijo las propiedades de elementos que aún no se conocían (como el galio y el germanio) gracias a los huecos de su tabla."},
+  {q:"La tabla periódica actual está ordenada por:", o:["Número atómico","Masa atómica","Electronegatividad","Densidad"], a:0, e:"Moseley demostró que el orden correcto es por número de protones (Z)."},
+  {q:"Los elementos de un mismo grupo tienen propiedades químicas parecidas porque:", o:["Tienen el mismo número de electrones de valencia","Tienen la misma masa","Están en el mismo periodo","Tienen el mismo número de neutrones"], a:0, e:"Los electrones de valencia son los que participan en las reacciones; si son iguales, los elementos reaccionan de forma parecida."},
+  {q:"Un elemento cuya configuración termina en 3p^5 se ubica en el periodo:", o:["3","5","7","2"], a:0, e:"El nivel más alto (n = 3) indica el periodo. Además, con 7 electrones de valencia está en el grupo 17 (es el cloro)."},
+  {q:"Los gases nobles se encuentran en el grupo:", o:["18","1","17","2"], a:0, e:"Grupo 18 (VIIIA): He, Ne, Ar, Kr, Xe, Rn. Tienen su último nivel completo y son muy poco reactivos."},
+  {q:"Si la configuración de un elemento termina en 4s^1, ¿dónde se ubica?", o:["Grupo 1, periodo 4, bloque s","Grupo 4, periodo 1, bloque s","Grupo 1, periodo 4, bloque d","Grupo 14, periodo 4, bloque p"], a:0, e:"n = 4 → periodo 4; termina en s → bloque s; 1 electrón de valencia → grupo 1. Es el potasio (K)."},
+  {q:"Los lantánidos y actínidos pertenecen al bloque:", o:["f","d","p","s"], a:0, e:"Son los metales de transición interna; su configuración termina en el subnivel f."}
+ ]},
+
+{id:"e2t2", et:2, icon:"🔩", titulo:"Metales, no metales y metaloides", pag:"pp. 104–110",
+ resumen:"La línea en forma de escalera divide la tabla: a la izquierda los metales, a la derecha los no metales y en la frontera los metaloides.",
+ puntos:[
+  "<b>Metales</b> (izquierda y centro, la mayoría): brillo, buenos conductores de calor y electricidad, maleables (láminas) y dúctiles (hilos), sólidos excepto el mercurio (líquido). Tienden a <b>perder</b> electrones (cationes).",
+  "<b>No metales</b> (derecha y el H): sin brillo, malos conductores, quebradizos; muchos son gases (O2, N2, Cl2). Tienden a <b>ganar</b> electrones (aniones).",
+  "<b>Metaloides</b> (en la escalera): B, Si, Ge, As, Sb, Te. Propiedades intermedias; son <b>semiconductores</b> (el silicio de los chips).",
+  "<b>Tierras raras</b> (lantánidos y actínidos): imanes, pantallas, baterías y energía nuclear."],
+ info:[{type:"ptable", mode:"tipo", titulo:"¿Metal, no metal o metaloide?"},
+  {type:"table", titulo:"Compara", head:["Propiedad","Metales","No metales"], rows:[["Brillo","Sí","No (opacos)"],["Conductividad","Buena","Mala (aislantes)"],["Maleabilidad","Maleables y dúctiles","Quebradizos"],["Electrones","Pierden → cationes","Ganan → aniones"],["Ejemplos","Fe, Cu, Au, Al","O, N, S, Cl"]]}],
+ truco:"Ubica la <b>escalera</b> que baja desde el boro (B). Todo lo que está a la izquierda es metal (menos el hidrógeno).",
+ videos:[{t:"Los metales y su uso en la vida diaria",u:TU+"fkt4yy57"}],
+ preguntas:[
+  {q:"¿Qué elemento se usa en los chips de computadora por ser semiconductor?", o:["Silicio (Si)","Oro (Au)","Azufre (S)","Sodio (Na)"], a:0, e:"El silicio es un metaloide: conduce la electricidad mejor que un no metal pero peor que un metal, ideal para semiconductores."},
+  {q:"El único metal que es líquido a temperatura ambiente es el:", o:["Mercurio (Hg)","Bromo (Br)","Galio (Ga)","Hierro (Fe)"], a:0, e:"El mercurio es metal y líquido. El bromo también es líquido, pero es un no metal."},
+  {q:"¿Cuál es una propiedad de los metales?", o:["Maleabilidad","Opacidad","Fragilidad","Ser aislantes"], a:0, e:"Los metales se pueden laminar (maleables) y estirar en hilos (dúctiles), como el aluminio y el cobre."},
+  {q:"Los no metales tienden a:", o:["Ganar electrones y formar aniones","Perder electrones y formar cationes","No formar iones nunca","Formar enlaces metálicos"], a:0, e:"Los no metales tienen muchos electrones de valencia y les conviene ganar los que les faltan para completar el octeto."},
+  {q:"El azufre (S), sólido amarillo, quebradizo y mal conductor, es un:", o:["No metal","Metal","Metaloide","Gas noble"], a:0, e:"Es opaco, quebradizo y aislante: propiedades de no metal. Está en el grupo 16."},
+  {q:"¿Dónde se ubican los metaloides en la tabla periódica?", o:["En la línea en escalera entre metales y no metales","En el grupo 1","En el bloque f","En el grupo 18"], a:0, e:"Los metaloides (B, Si, Ge, As, Sb, Te) están en la frontera, por eso tienen propiedades intermedias."}
+ ]},
+
+{id:"e2t3", et:2, icon:"📈", titulo:"Propiedades periódicas", pag:"pp. 111–115",
+ resumen:"Algunas propiedades cambian de forma ordenada en la tabla: el radio crece hacia abajo y a la izquierda; la electronegatividad y la energía de ionización, hacia arriba y a la derecha.",
+ puntos:[
+  "<b>Radio atómico:</b> tamaño del átomo. Aumenta hacia <b>abajo</b> (más niveles) y hacia la <b>izquierda</b> (menos carga nuclear que jale a los electrones).",
+  "<b>Energía de ionización:</b> energía para quitarle un electrón a un átomo. Aumenta hacia <b>arriba</b> y a la <b>derecha</b>.",
+  "<b>Electronegatividad:</b> capacidad de un átomo para atraer electrones en un enlace. Aumenta hacia arriba y a la derecha. El <b>flúor</b> es el más electronegativo (4.0). Los gases nobles no se consideran.",
+  "<b>Afinidad electrónica:</b> energía involucrada al ganar un electrón; tiende a aumentar hacia arriba y a la derecha.",
+  "<b>Carácter metálico:</b> aumenta hacia abajo y a la izquierda (cesio y francio son los más metálicos)."],
+ info:[{type:"cards", titulo:"Tendencias en la tabla", items:[
+   {i:"↙️",t:"Radio atómico",d:"Crece hacia abajo y a la izquierda"},
+   {i:"↗️",t:"Electronegatividad",d:"Crece hacia arriba y a la derecha (máx. F)"},
+   {i:"↗️",t:"Energía de ionización",d:"Crece hacia arriba y a la derecha"},
+   {i:"↗️",t:"Afinidad electrónica",d:"Tiende a crecer arriba y a la derecha"},
+   {i:"↙️",t:"Carácter metálico",d:"Crece hacia abajo y a la izquierda"}]}],
+ truco:"Solo memoriza dos esquinas: <b>flúor (arriba-derecha)</b> gana en electronegatividad e ionización; <b>francio (abajo-izquierda)</b> gana en radio y carácter metálico.",
+ videos:[{t:"Electronegatividad",u:TU+"mr2u2x4a"}],
+ preguntas:[
+  {q:"¿Cuál es el elemento más electronegativo?", o:["Flúor","Oxígeno","Cloro","Cesio"], a:0, e:"El flúor (4.0) está arriba a la derecha (sin contar gases nobles): es el que más atrae electrones."},
+  {q:"Al bajar en un grupo, el radio atómico:", o:["Aumenta","Disminuye","No cambia","Se vuelve cero"], a:0, e:"Cada periodo agrega un nivel de energía, así que el átomo es más grande."},
+  {q:"¿Quién tiene mayor energía de ionización, el sodio (Na) o el cloro (Cl)?", o:["Cloro","Sodio","Tienen la misma","No se puede saber"], a:0, e:"Ambos están en el periodo 3, pero el cloro está más a la derecha: retiene más fuerte sus electrones."},
+  {q:"¿Qué elemento tiene mayor carácter metálico?", o:["Cesio (Cs)","Flúor (F)","Oxígeno (O)","Cloro (Cl)"], a:0, e:"El carácter metálico crece hacia abajo y a la izquierda; el cesio está en el grupo 1, periodo 6."},
+  {q:"Ordena de mayor a menor radio atómico: Li, Na, K.", o:["K > Na > Li","Li > Na > K","Na > K > Li","Todos son iguales"], a:0, e:"Están en el grupo 1; el potasio está más abajo (periodo 4), luego el sodio (3) y el litio (2)."},
+  {q:"¿Por qué el radio atómico disminuye de izquierda a derecha en un periodo?", o:["Porque aumenta la carga del núcleo y atrae más a los electrones","Porque se pierden niveles de energía","Porque disminuyen los protones","Porque aumentan los neutrones"], a:0, e:"En un mismo periodo los electrones están en el mismo nivel, pero hay más protones que los jalan hacia el núcleo."}
+ ]},
+
+{id:"e2t4", et:2, icon:"⚫", titulo:"Estructura de Lewis y regla del octeto", pag:"pp. 116–119",
+ resumen:"Las estructuras de Lewis dibujan los electrones de valencia como puntos. Los átomos se unen para completar 8 electrones (octeto).",
+ puntos:[
+  "<b>Electrones de valencia:</b> los del último nivel. En los grupos 1, 2 y 13–18 se obtienen del número de grupo (13 → 3, 14 → 4, 15 → 5, 16 → 6, 17 → 7).",
+  "<b>Estructura de Lewis de un átomo:</b> símbolo + un punto por cada electrón de valencia. Ej. N con 5 puntos.",
+  "<b>Regla del octeto:</b> los átomos ganan, pierden o comparten electrones para tener 8 en su último nivel, como un gas noble. El hidrógeno solo necesita 2 (dueto).",
+  "<b>Pasos para una molécula:</b> 1) suma los electrones de valencia; 2) el átomo central es el menos electronegativo (nunca el H); 3) une con enlaces (cada enlace = 2 e^-); 4) completa octetos con pares libres; 5) si faltan, usa enlaces dobles o triples.",
+  "<b>Ejemplos:</b> H2O (O central, 2 enlaces y 2 pares libres); CO2 (O=C=O, dos dobles); N2 (N≡N, triple)."],
+ info:[{type:"lewis", titulo:"Ejemplos de estructuras de Lewis"}],
+ truco:"Cuenta electrones antes de dibujar. CO2: C (4) + O (6) + O (6) = <b>16</b>. Tu dibujo final debe tener exactamente 16 electrones.",
+ videos:[{t:"Enlaces covalentes polares y no polares",u:TU+"4mmhuz8t"}],
+ preguntas:[
+  {q:"¿Cuántos puntos lleva la estructura de Lewis del nitrógeno (grupo 15)?", o:["5","3","7","15"], a:0, e:"Grupo 15 → 5 electrones de valencia (2s^2 2p^3) → 5 puntos."},
+  {q:"La regla del octeto dice que los átomos tienden a:", o:["Completar 8 electrones en su último nivel","Tener 8 protones","Formar 8 enlaces","Perder 8 electrones"], a:0, e:"Con 8 electrones en el último nivel el átomo adquiere la estabilidad de un gas noble."},
+  {q:"¿Cuántos electrones de valencia hay en total en la molécula de CO2?", o:["16","12","10","22"], a:0, e:"C aporta 4 y cada O aporta 6: 4 + 6 + 6 = 16."},
+  {q:"En la molécula de agua (H2O), ¿cuántos pares de electrones libres tiene el oxígeno?", o:["2","1","3","0"], a:0, e:"El O tiene 6 electrones de valencia: usa 2 para los enlaces con los H y le quedan 4, es decir, 2 pares libres."},
+  {q:"La molécula de nitrógeno (N2) presenta un enlace:", o:["Triple","Sencillo","Doble","Iónico"], a:0, e:"Cada N tiene 5 electrones de valencia; compartiendo 3 pares (N≡N) ambos completan el octeto."},
+  {q:"¿Qué átomo es la excepción porque se estabiliza con solo 2 electrones?", o:["Hidrógeno","Oxígeno","Carbono","Nitrógeno"], a:0, e:"El hidrógeno solo tiene el nivel 1, que se llena con 2 electrones (regla del dueto, como el helio)."}
+ ]},
+
+{id:"e2t5", et:2, icon:"🔗", titulo:"Tipos de enlace químico", pag:"pp. 112–122",
+ resumen:"La diferencia de electronegatividad (ΔEN) entre dos átomos decide el enlace: si es grande se transfieren electrones (iónico); si es pequeña se comparten (covalente).",
+ puntos:[
+  "<b>Iónico:</b> transferencia de electrones de un metal a un no metal. ΔEN <b>mayor de 1.7</b>. Forma cationes y aniones. Sólidos cristalinos, altos puntos de fusión, se disuelven en agua y conducen electricidad disueltos o fundidos. Ej. NaCl.",
+  "<b>Covalente no polar:</b> se comparten electrones por igual. ΔEN de <b>0 a 0.4</b>. Ej. O2, Cl2, H2, CH4.",
+  "<b>Covalente polar:</b> se comparten de forma desigual; aparecen cargas parciales δ+ y δ−. ΔEN de <b>0.5 a 1.6</b>. Ej. H2O, HCl, NH3.",
+  "<b>Metálico:</b> entre átomos de metal; los electrones se mueven libremente («mar de electrones»). Explica la conductividad y el brillo.",
+  "Electronegatividades útiles: H 2.1 · C 2.5 · N 3.0 · O 3.5 · F 4.0 · Na 0.9 · Mg 1.2 · S 2.5 · Cl 3.0 · K 0.8 · Br 2.8."],
+ info:[{type:"enscale", titulo:"Diferencia de electronegatividad (ΔEN)"}],
+ truco:"Resta las electronegatividades (la mayor menos la menor). <b>0–0.4</b> no polar · <b>0.5–1.6</b> polar · <b>más de 1.7</b> iónico. Atajo: metal + no metal casi siempre = iónico.",
+ videos:[{t:"Electronegatividad y tipo de enlace",u:TU+"mr2u2x4a"},{t:"Enlaces covalentes polares y no polares",u:TU+"4mmhuz8t"}],
+ preguntas:[
+  {q:"En el NaCl, Na = 0.9 y Cl = 3.0. ¿Qué tipo de enlace hay?", o:["Iónico","Covalente polar","Covalente no polar","Metálico"], a:0, e:"ΔEN = 3.0 − 0.9 = 2.1, mayor de 1.7 → iónico."},
+  {q:"En el HCl, H = 2.1 y Cl = 3.0. ¿Qué tipo de enlace hay?", o:["Covalente polar","Iónico","Covalente no polar","Metálico"], a:0, e:"ΔEN = 0.9, entre 0.5 y 1.6 → covalente polar: el Cl atrae más a los electrones compartidos."},
+  {q:"La molécula de oxígeno (O2) tiene un enlace:", o:["Covalente no polar","Covalente polar","Iónico","Metálico"], a:0, e:"Son dos átomos iguales: ΔEN = 0, los electrones se comparten por igual."},
+  {q:"El modelo del «mar de electrones», que explica por qué el cobre conduce la electricidad, corresponde al enlace:", o:["Metálico","Iónico","Covalente polar","Puente de hidrógeno"], a:0, e:"En los metales los electrones de valencia se mueven libremente entre los cationes, por eso conducen."},
+  {q:"¿Qué propiedad tienen los compuestos iónicos?", o:["Conducen la electricidad disueltos en agua","Son gases a temperatura ambiente","Tienen puntos de fusión muy bajos","Nunca se disuelven en agua"], a:0, e:"Al disolverse, los iones quedan libres y pueden transportar carga eléctrica."},
+  {q:"En el agua, H = 2.1 y O = 3.5. El enlace O–H es:", o:["Covalente polar","Iónico","Covalente no polar","Metálico"], a:0, e:"ΔEN = 1.4 (entre 0.5 y 1.6) → covalente polar. Por eso el agua tiene un polo δ− (O) y polos δ+ (H)."},
+  {q:"En el KBr, K = 0.8 y Br = 2.8. ¿Qué enlace se forma?", o:["Iónico","Covalente polar","Covalente no polar","Metálico"], a:0, e:"ΔEN = 2.0, mayor de 1.7 → iónico (metal del grupo 1 con halógeno)."}
+ ]},
+
+{id:"e2t6", et:2, icon:"🧲", titulo:"Fuerzas intermoleculares", pag:"pp. 125–126",
+ resumen:"Además de los enlaces (dentro de la molécula), hay atracciones más débiles entre moléculas vecinas que explican puntos de ebullición y estados físicos.",
+ puntos:[
+  "<b>Intramoleculares</b> (enlaces, dentro de la molécula) son más fuertes que las <b>intermoleculares</b> (entre moléculas).",
+  "<b>Puente de hidrógeno:</b> atracción entre un H unido a F, O o N y otro átomo de F, O o N de una molécula vecina. Explica el alto punto de ebullición del H2O, HF y NH3, y la estructura del ADN y las proteínas.",
+  "<b>Fuerzas de Van der Waals:</b> atracciones débiles. Incluyen dipolo-dipolo (moléculas polares) y dipolos inducidos o de London (moléculas no polares como O2 y N2).",
+  "<b>Más fuerzas intermoleculares → mayor punto de fusión y de ebullición.</b>",
+  "Gracias a los puentes de hidrógeno el agua es líquida a temperatura ambiente y el hielo flota."],
+ info:[{type:"cards", titulo:"De más fuerte a más débil", items:[
+   {i:"🔗",t:"Enlaces",d:"Dentro de la molécula (intramoleculares)"},
+   {i:"💧",t:"Puente de hidrógeno",d:"H unido a F, O o N"},
+   {i:"↔️",t:"Dipolo-dipolo",d:"Entre moléculas polares"},
+   {i:"〰️",t:"London / dipolo inducido",d:"Entre moléculas no polares (O2, N2)"}]}],
+ truco:"¿La molécula tiene H pegado a <b>F, O o N</b>? → puente de hidrógeno (recuerda «<b>FON</b>»).",
+ videos:[{t:"Enlaces covalentes polares y no polares",u:TU+"4mmhuz8t"}],
+ preguntas:[
+  {q:"¿Qué fuerza explica que el agua sea líquida a temperatura ambiente?", o:["Puentes de hidrógeno","Enlace metálico","Fuerzas nucleares","Enlace iónico"], a:0, e:"Los puentes de hidrógeno mantienen unidas a las moléculas de agua, por eso necesita más energía para hervir."},
+  {q:"Entre moléculas de nitrógeno (N2), que son no polares, actúan fuerzas de:", o:["Van der Waals (dipolo inducido)","Puente de hidrógeno","Enlace iónico","Enlace metálico"], a:0, e:"Las moléculas no polares solo se atraen por dipolos momentáneos o inducidos (London), que son muy débiles."},
+  {q:"Para que exista un puente de hidrógeno, el H debe estar unido a:", o:["F, O o N","C o S","Na o K","Cualquier metal"], a:0, e:"Solo F, O y N son tan electronegativos y pequeños como para formar puentes de hidrógeno."},
+  {q:"¿Cuáles son más fuertes?", o:["Los enlaces dentro de la molécula","Las fuerzas entre moléculas","Son iguales","Depende del color"], a:0, e:"Las fuerzas intramoleculares (enlaces) son mucho más fuertes que las intermoleculares."},
+  {q:"¿Cuál de estas sustancias forma puentes de hidrógeno?", o:["NH3","CH4","O2","CO2"], a:0, e:"En el amoniaco el H está unido al N, uno de los tres átomos «FON»."},
+  {q:"Si una sustancia tiene fuerzas intermoleculares más intensas, su punto de ebullición es:", o:["Mayor","Menor","Igual","Cero"], a:0, e:"Se necesita más energía para separar a las moléculas y pasarlas a gas."}
+ ]},
+
+// ===================== ETAPA 3 =====================
+{id:"e3t1", et:3, icon:"🏷️", titulo:"Sistemas de nomenclatura e iones", pag:"pp. 140–146",
+ resumen:"La IUPAC reconoce tres formas de nombrar compuestos: sistemática (prefijos), tradicional (-oso/-ico) y Stock (números romanos). Todo empieza por conocer los iones.",
+ puntos:[
+  "<b>IUPAC:</b> organismo internacional que establece las reglas para nombrar compuestos químicos.",
+  "<b>Sistemática (estequiométrica):</b> usa prefijos (mono, di, tri, tetra, penta…) según el número de átomos. Fe2O3 = trióxido de dihierro.",
+  "<b>Tradicional (clásica):</b> sufijo <b>-oso</b> para el número de oxidación menor e <b>-ico</b> para el mayor. FeO = óxido ferroso; Fe2O3 = óxido férrico.",
+  "<b>Stock:</b> número de oxidación con número romano. FeO = óxido de hierro (II); Fe2O3 = óxido de hierro (III).",
+  "<b>Catión:</b> ion positivo (perdió e^-), casi siempre metales: Na^+, Ca^2+, Al^3+. <b>Anión:</b> ion negativo (ganó e^-), no metales: Cl^- (cloruro), S^2- (sulfuro), O^2- (óxido).",
+  "<b>Iones poliatómicos frecuentes:</b> OH^- hidróxido · NO3^- nitrato · SO4^2- sulfato · CO3^2- carbonato · PO4^3- fosfato · NH4^+ amonio."],
+ info:[{type:"table", titulo:"Un compuesto, tres nombres", head:["Fórmula","Sistemática","Tradicional","Stock"], rows:[["FeO","Monóxido de hierro","Óxido ferroso","Óxido de hierro (II)"],["Fe2O3","Trióxido de dihierro","Óxido férrico","Óxido de hierro (III)"],["CuO","Monóxido de cobre","Óxido cúprico","Óxido de cobre (II)"]]},
+  {type:"table", titulo:"Iones que debes conocer", head:["Ion","Nombre","Ion","Nombre"], rows:[["Na^+","sodio","Cl^-","cloruro"],["Ca^2+","calcio","S^2-","sulfuro"],["Al^3+","aluminio","O^2-","óxido"],["Fe^2+ / Fe^3+","ferroso / férrico","NO3^-","nitrato"],["Cu^+ / Cu^2+","cuproso / cúprico","SO4^2-","sulfato"],["NH4^+","amonio","CO3^2-","carbonato"]]}],
+ truco:"Para saber el número de oxidación del metal: multiplica la carga del anión por su subíndice y repártela entre los átomos del metal. Fe2O3: 3 × (−2) = −6 → 6 ÷ 2 = <b>+3</b>.",
+ videos:[{t:"¿Qué es la IUPAC?",u:TU+"4xej9tcv"},{t:"La importancia de la química inorgánica",u:TU+"3kr4wwet"}],
+ preguntas:[
+  {q:"¿Cuál es el nombre Stock de Fe2O3?", o:["Óxido de hierro (III)","Óxido de hierro (II)","Óxido ferroso","Trióxido de hierro"], a:0, e:"3 O × (−2) = −6; repartido entre 2 Fe → +3 cada uno. En Stock: óxido de hierro (III)."},
+  {q:"El cobre tiene números de oxidación +1 y +2. En la nomenclatura tradicional, el CuO se llama:", o:["Óxido cúprico","Óxido cuproso","Óxido de cobre (I)","Dióxido de cobre"], a:0, e:"En CuO el cobre trabaja con +2, que es el mayor → terminación -ico: cúprico."},
+  {q:"¿Qué sistema de nomenclatura usa prefijos como mono, di y tri?", o:["Sistemático","Stock","Tradicional","Ninguno"], a:0, e:"La nomenclatura sistemática (estequiométrica) indica con prefijos cuántos átomos hay de cada elemento."},
+  {q:"Un ion con carga positiva se llama:", o:["Catión","Anión","Isótopo","Molécula"], a:0, e:"El catión se forma cuando un átomo pierde electrones y queda con más protones que electrones."},
+  {q:"El ion SO4^2- se llama:", o:["Sulfato","Sulfuro","Sulfito","Sulfhídrico"], a:0, e:"SO4^2- es sulfato (poliatómico). Sulfuro es S^2- y sulfito es SO3^2-."},
+  {q:"El ion Cl^- se llama:", o:["Cloruro","Clorato","Cloro","Clorito"], a:0, e:"Los aniones monoatómicos terminan en -uro: cloro → cloruro."},
+  {q:"¿Cuál es el catión poliatómico más común?", o:["Amonio (NH4^+)","Hidróxido (OH^-)","Nitrato (NO3^-)","Carbonato (CO3^2-)"], a:0, e:"El amonio es el catión poliatómico más usado; los demás de la lista son aniones."}
+ ]},
+
+{id:"e3t2", et:3, icon:"✍️", titulo:"Escritura de fórmulas y clasificación de compuestos", pag:"pp. 147–153",
+ resumen:"Para escribir una fórmula se coloca primero el catión y luego el anión, cuidando que las cargas sumen cero.",
+ puntos:[
+  "<b>Regla de oro:</b> primero el catión (+), después el anión (−). La suma de cargas debe ser <b>cero</b>.",
+  "<b>Cargas iguales y opuestas:</b> se unen 1 a 1. Na^+ + Cl^- → NaCl; Ca^2+ + O^2- → CaO.",
+  "<b>Cargas diferentes:</b> se <b>cruzan</b> las cargas como subíndices y se simplifica si se puede. Al^3+ + O^2- → Al2O3.",
+  "<b>Iones poliatómicos:</b> si se necesita más de uno, van entre paréntesis. Ca^2+ + NO3^- → Ca(NO3)2.",
+  "<b>Clasificación:</b> orgánicos (con C e H) vs. inorgánicos · iónicos (conducen, se disuelven) vs. covalentes · binarios (2 elementos: KBr), ternarios (3: K2SO4) y cuaternarios (4 o más: NaHCO3)."],
+ info:[{type:"steps", titulo:"Método del cruce (Al^3+ y O^2-)", items:[
+   {t:"1. Escribe los iones",d:"Al^3+   O^2-"},{t:"2. Cruza las cargas",d:"El 3 va al O y el 2 va al Al"},
+   {t:"3. Escribe la fórmula",d:"Al2O3"},{t:"4. Comprueba",d:"2(+3) + 3(−2) = 0 ✔️"}]}],
+ truco:"Si después de cruzar los subíndices se pueden dividir entre el mismo número, simplifica: Ca^2+ + O^2- → Ca2O2 → <b>CaO</b>.",
+ videos:[{t:"La química en la vida diaria",u:TU+"2yaztcpa"}],
+ preguntas:[
+  {q:"¿Qué fórmula se forma con Mg^2+ y Cl^-?", o:["MgCl2","MgCl","Mg2Cl","Mg2Cl2"], a:0, e:"Se necesitan 2 Cl^- para neutralizar la carga +2 del magnesio: MgCl2."},
+  {q:"¿Qué fórmula se forma con Al^3+ y SO4^2-?", o:["Al2(SO4)3","Al3(SO4)2","AlSO4","Al2SO4"], a:0, e:"Cruzando cargas: 2 Al (+6) y 3 SO4 (−6). El sulfato va entre paréntesis porque se repite."},
+  {q:"¿Qué fórmula se forma con Fe^3+ y O^2-?", o:["Fe2O3","Fe3O2","FeO","FeO3"], a:0, e:"2 × (+3) = +6 y 3 × (−2) = −6. La suma es cero."},
+  {q:"El K2SO4 es un compuesto:", o:["Ternario","Binario","Cuaternario","Orgánico"], a:0, e:"Tiene tres elementos distintos: K, S y O."},
+  {q:"El metano (CH4) es un compuesto:", o:["Orgánico","Inorgánico iónico","Binario iónico","Metálico"], a:0, e:"Los compuestos orgánicos contienen carbono unido a hidrógeno."},
+  {q:"¿Por qué en Ca(OH)2 el OH va entre paréntesis?", o:["Porque se necesitan dos iones hidróxido completos","Porque el calcio es líquido","Porque el oxígeno es metal","Por decoración"], a:0, e:"El paréntesis indica que el subíndice 2 multiplica a todo el ion poliatómico OH^-."},
+  {q:"Con NH4^+ y Cl^- se forma:", o:["NH4Cl","(NH4)2Cl","NH4Cl2","NHCl4"], a:0, e:"Las cargas +1 y −1 se neutralizan 1 a 1: NH4Cl (cloruro de amonio)."}
+ ]},
+
+{id:"e3t3", et:3, icon:"🟥", titulo:"Óxidos y peróxidos", pag:"pp. 158–159",
+ resumen:"Los óxidos son compuestos binarios de un elemento con oxígeno: metálicos (básicos) o no metálicos (ácidos o anhídridos).",
+ puntos:[
+  "<b>Óxido metálico (básico):</b> metal + oxígeno. Nombre: «óxido de + metal» (con número romano si el metal tiene varios). CaO = óxido de calcio; Cr2O3 = óxido de cromo (III).",
+  "<b>Óxido no metálico (ácido o anhídrido):</b> no metal + oxígeno. Se nombra con prefijos: CO = monóxido de carbono; CO2 = dióxido de carbono; SO3 = trióxido de azufre; N2O5 = pentóxido de dinitrógeno.",
+  "<b>Peróxidos:</b> contienen el grupo O2^2- (dos oxígenos unidos). H2O2 = peróxido de hidrógeno (agua oxigenada); Na2O2 = peróxido de sodio.",
+  "<b>Conexión:</b> óxido metálico + agua → hidróxido (base). Óxido no metálico + agua → oxiácido.",
+  "<b>Prefijos:</b> 1 mono · 2 di · 3 tri · 4 tetra · 5 penta · 6 hexa · 7 hepta."],
+ info:[{type:"tree", titulo:"Familia de los óxidos", root:{t:"ÓXIDOS",d:"elemento + O",c:[
+   {t:"Metálicos (básicos)",d:"Na2O, CaO, FeO",c:[{t:"+ H2O → Hidróxido",d:"base"}]},
+   {t:"No metálicos (anhídridos)",d:"CO2, SO3, N2O5",c:[{t:"+ H2O → Oxiácido",d:"ácido"}]},
+   {t:"Peróxidos",d:"H2O2, Na2O2"}]}}],
+ truco:"¿El otro elemento es <b>metal</b>? → «óxido de…» (+ romano si hace falta). ¿Es <b>no metal</b>? → usa <b>prefijos</b> (di-, tri-, penta-…).",
+ videos:[{t:"La importancia de la química inorgánica",u:TU+"3kr4wwet"}],
+ preguntas:[
+  {q:"El nombre del Na2O es:", o:["Óxido de sodio","Dióxido de sodio","Peróxido de sodio","Óxido sódico (II)"], a:0, e:"El sodio solo tiene número de oxidación +1, así que no lleva romano: óxido de sodio."},
+  {q:"El nombre del N2O5 es:", o:["Pentóxido de dinitrógeno","Óxido de nitrógeno (V)","Dióxido de pentanitrógeno","Nitrato de oxígeno"], a:0, e:"Es un óxido no metálico: 5 oxígenos (penta) y 2 nitrógenos (di)."},
+  {q:"El CO2 es un óxido:", o:["No metálico (anhídrido)","Metálico (básico)","Peróxido","Hidróxido"], a:0, e:"El carbono es no metal, así que el CO2 es un óxido ácido o anhídrido."},
+  {q:"La fórmula del óxido de hierro (II) es:", o:["FeO","Fe2O3","FeO2","Fe2O"], a:0, e:"Fe^2+ con O^2-: las cargas se neutralizan 1 a 1 → FeO."},
+  {q:"El agua oxigenada (H2O2) es un:", o:["Peróxido","Óxido metálico","Hidróxido","Oxiácido"], a:0, e:"Contiene el grupo peróxido O2^2- (dos oxígenos unidos)."},
+  {q:"Cuando un óxido metálico reacciona con agua se forma un:", o:["Hidróxido (base)","Oxiácido","Sal","Peróxido"], a:0, e:"Ej.: CaO + H2O → Ca(OH)2. Los óxidos metálicos se llaman básicos por eso."},
+  {q:"¿Cuál es la fórmula del trióxido de azufre?", o:["SO3","S3O","SO2","S2O3"], a:0, e:"«Tri» = 3 oxígenos y, como no lleva prefijo, hay 1 azufre: SO3."}
+ ]},
+
+{id:"e3t4", et:3, icon:"🧼", titulo:"Hidróxidos (bases)", pag:"p. 155",
+ resumen:"Los hidróxidos o bases tienen un metal unido al ion hidróxido OH^-. Se nombran «hidróxido de + metal».",
+ puntos:[
+  "<b>Fórmula:</b> catión metálico + ion OH^-. Ej.: NaOH, Ca(OH)2, Al(OH)3, NH4OH.",
+  "<b>Propiedades:</b> sabor amargo, sensación jabonosa, cambian el tornasol de <b>rojo a azul</b> y aumentan la concentración de OH^- en agua.",
+  "<b>Nombre:</b> «hidróxido de + metal». Si el metal tiene varios números de oxidación: Fe(OH)2 = hidróxido de hierro (II) o ferroso; Fe(OH)3 = hidróxido de hierro (III) o férrico.",
+  "<b>En tu vida:</b> NaOH (sosa cáustica, destapacaños), Ca(OH)2 (cal apagada), Mg(OH)2 (leche de magnesia, antiácido), Al(OH)3 (antiácidos)."],
+ info:[{type:"cards", titulo:"Bases en tu casa", items:[
+   {i:"🚿",t:"NaOH",d:"Hidróxido de sodio · destapacaños"},{i:"🧱",t:"Ca(OH)2",d:"Hidróxido de calcio · cal"},
+   {i:"💊",t:"Mg(OH)2",d:"Hidróxido de magnesio · leche de magnesia"},{i:"🧴",t:"Al(OH)3",d:"Hidróxido de aluminio · antiácido"}]}],
+ truco:"El número de OH = carga del metal. Al^3+ → <b>Al(OH)3</b>. Fe^2+ → <b>Fe(OH)2</b>.",
+ videos:[{t:"La química en la vida diaria",u:TU+"2yaztcpa"}],
+ preguntas:[
+  {q:"¿Qué ion identifica a una base o hidróxido?", o:["OH^-","H^+","O^2-","Cl^-"], a:0, e:"Todos los hidróxidos contienen el ion hidróxido OH^-."},
+  {q:"El NaOH se llama:", o:["Hidróxido de sodio","Óxido de sodio","Hidruro de sodio","Sodio hidratado"], a:0, e:"Metal (sodio) + OH^- → hidróxido de sodio."},
+  {q:"El Fe(OH)2 se llama:", o:["Hidróxido de hierro (II) o ferroso","Hidróxido de hierro (III) o férrico","Óxido ferroso","Dihidróxido férrico"], a:0, e:"Hay 2 OH^- (−2 en total), así que el Fe es +2: hierro (II), el menor → ferroso."},
+  {q:"La fórmula del hidróxido de aluminio es:", o:["Al(OH)3","AlOH","Al3OH","Al(OH)2"], a:0, e:"El aluminio es Al^3+, necesita 3 OH^- para neutralizarse."},
+  {q:"Al agregar una base, el papel tornasol cambia de:", o:["Rojo a azul","Azul a rojo","Blanco a negro","No cambia"], a:0, e:"Las bases vuelven azul el tornasol rojo; los ácidos vuelven rojo el tornasol azul."},
+  {q:"La leche de magnesia, usada como antiácido, es:", o:["Mg(OH)2","MgO2","MgCl2","MgSO4"], a:0, e:"El hidróxido de magnesio es una base suave que neutraliza el exceso de ácido en el estómago."}
+ ]},
+
+{id:"e3t5", et:3, icon:"🍋", titulo:"Ácidos: hidrácidos y oxiácidos", pag:"pp. 153–154",
+ resumen:"Los ácidos tienen hidrógeno como catión. Si no tienen oxígeno son hidrácidos (-hídrico); si lo tienen son oxiácidos (hipo-oso, -oso, -ico, per-ico).",
+ puntos:[
+  "<b>Propiedades:</b> liberan H^+ en agua, sabor agrio, cambian el tornasol de <b>azul a rojo</b>.",
+  "<b>Hidrácidos (binarios):</b> H + no metal, sin oxígeno. «Ácido + raíz + <b>hídrico</b>»: HCl clorhídrico, HBr bromhídrico, HF fluorhídrico, H2S sulfhídrico.",
+  "<b>Oxiácidos (ternarios):</b> H + no metal + O. El nombre depende de cuántos oxígenos tiene: HClO hip<b>o</b>clor<b>oso</b> · HClO2 clor<b>oso</b> · HClO3 clór<b>ico</b> · HClO4 <b>per</b>clór<b>ico</b>.",
+  "<b>Oxiácidos comunes:</b> H2SO4 sulfúrico · H2SO3 sulfuroso · HNO3 nítrico · HNO2 nitroso · H2CO3 carbónico · H3PO4 fosfórico.",
+  "<b>Por número de H:</b> monopróticos (1 H: HNO3), dipróticos (2 H: H2SO4), polipróticos (3 o más: H3PO4)."],
+ info:[{type:"table", titulo:"Serie del cloro (de menos a más oxígeno)", head:["Fórmula","Nombre","Patrón"], rows:[["HCl","Ácido clorhídrico","___hídrico (sin O)"],["HClO","Ácido hipocloroso","hipo___oso"],["HClO2","Ácido cloroso","___oso"],["HClO3","Ácido clórico","___ico"],["HClO4","Ácido perclórico","per___ico"]]}],
+ truco:"Primero busca el <b>oxígeno</b>: ¿no hay? → <b>-hídrico</b>. ¿Sí hay? → compara con la serie: menos oxígenos = <b>-oso</b>, más oxígenos = <b>-ico</b>.",
+ videos:[{t:"La importancia de la química inorgánica",u:TU+"3kr4wwet"}],
+ preguntas:[
+  {q:"El HBr se llama:", o:["Ácido bromhídrico","Ácido brómico","Ácido bromoso","Bromuro de hidrógeno (II)"], a:0, e:"No tiene oxígeno → hidrácido → ácido brom<b>hídrico</b>."},
+  {q:"El HClO4 se llama:", o:["Ácido perclórico","Ácido clórico","Ácido hipocloroso","Ácido clorhídrico"], a:0, e:"Es el oxiácido del cloro con más oxígenos (4): per___ico → perclórico."},
+  {q:"Por su número de hidrógenos, el H2SO4 es un ácido:", o:["Diprótico","Monoprótico","Poliprótico","Hidrácido"], a:0, e:"Tiene 2 átomos de H que puede liberar → diprótico."},
+  {q:"El HNO2 se llama:", o:["Ácido nitroso","Ácido nítrico","Ácido hiponitroso","Ácido nitrhídrico"], a:0, e:"El HNO3 es el nítrico (-ico, más O); el HNO2 tiene un oxígeno menos → nitroso (-oso)."},
+  {q:"¿Cuál es la diferencia entre un hidrácido y un oxiácido?", o:["El oxiácido contiene oxígeno y el hidrácido no","El hidrácido contiene metal","El oxiácido no tiene hidrógeno","No hay diferencia"], a:0, e:"Hidrácido = H + no metal; oxiácido = H + no metal + O."},
+  {q:"El H3PO4 (ácido fosfórico) se clasifica como:", o:["Poliprótico","Monoprótico","Diprótico","Hidrácido"], a:0, e:"Tiene 3 hidrógenos → poliprótico (triprótico)."},
+  {q:"El ácido presente en el jugo gástrico del estómago es:", o:["HCl (ácido clorhídrico)","H2SO4 (ácido sulfúrico)","HNO3 (ácido nítrico)","H2CO3 (ácido carbónico)"], a:0, e:"El estómago produce ácido clorhídrico para ayudar a la digestión."}
+ ]},
+
+{id:"e3t6", et:3, icon:"🧂", titulo:"Sales", pag:"pp. 155–159",
+ resumen:"Las sales se forman al unir un catión (metal o amonio) con el anión de un ácido. Se nombran cambiando la terminación del ácido.",
+ puntos:[
+  "<b>Neutralización:</b> ácido + base → sal + agua. Ej.: HCl + NaOH → NaCl + H2O.",
+  "<b>Sales binarias (haloideas):</b> metal + no metal. «no metal-<b>uro</b> de + metal»: NaCl cloruro de sodio, CaF2 fluoruro de calcio, FeS sulfuro de hierro (II).",
+  "<b>Oxisales (ternarias):</b> metal + anión con oxígeno. Cambia la terminación del ácido: <b>-oso → -ito</b> y <b>-ico → -ato</b>. KNO3 nitrato de potasio, NaClO hipoclorito de sodio (cloro de limpieza), CaCO3 carbonato de calcio, CuSO4 sulfato de cobre (II), KMnO4 permanganato de potasio.",
+  "<b>Poliatómicas:</b> ácidas (NaHCO3 bicarbonato o hidrógenocarbonato de sodio), básicas (Mg(OH)Cl), dobles (KNaCO3) e hidratadas (CuSO4·5H2O)."],
+ info:[{type:"table", titulo:"Del ácido a la sal", head:["Ácido","→","Sal (anión)","Ejemplo"], rows:[["___hídrico","→","___uro","NaCl cloruro de sodio"],["hipo___oso","→","hipo___ito","NaClO hipoclorito de sodio"],["___oso","→","___ito","K2SO3 sulfito de potasio"],["___ico","→","___ato","KNO3 nitrato de potasio"],["per___ico","→","per___ato","KMnO4 permanganato de potasio"]]}],
+ truco:"Rima para el examen: «<b>el oso toca el pito</b> y <b>el pico ve al pato</b>» → -oso pasa a -ito; -ico pasa a -ato. Y -hídrico pasa a -uro.",
+ videos:[{t:"La química en la vida diaria",u:TU+"2yaztcpa"}],
+ preguntas:[
+  {q:"El KCl se llama:", o:["Cloruro de potasio","Clorato de potasio","Clorito de potasio","Potasio clorhídrico"], a:0, e:"Sal binaria: cloro → cloruro, seguido de «de potasio»."},
+  {q:"La sal que se forma con sodio y el anión del ácido nítrico (HNO3) es:", o:["NaNO3, nitrato de sodio","NaNO2, nitrito de sodio","NaN, nitruro de sodio","Na(NO3)2, nitrato de sodio"], a:0, e:"Ácido nítrico (-ico) → nitrato (-ato). Na^+ con NO3^- → NaNO3."},
+  {q:"El NaClO (cloro comercial para limpieza) se llama:", o:["Hipoclorito de sodio","Clorato de sodio","Cloruro de sodio","Perclorato de sodio"], a:0, e:"Viene del ácido hipocloroso (hipo-oso) → hipoclorito (hipo-ito)."},
+  {q:"¿Cuál es la sal que forma el potasio con el anión del ácido sulfuroso (H2SO3)?", o:["K2SO3, sulfito de potasio","K2SO4, sulfato de potasio","K2S, sulfuro de potasio","KSO3, sulfito de potasio"], a:0, e:"Sulfuroso (-oso) → sulfito (-ito). SO3^2- necesita 2 K^+ → K2SO3."},
+  {q:"La reacción ácido + base → sal + agua se llama:", o:["Neutralización","Combustión","Descomposición","Síntesis"], a:0, e:"El ácido y la base se neutralizan mutuamente formando una sal y agua."},
+  {q:"El bicarbonato de sodio (NaHCO3) es una sal:", o:["Ácida","Básica","Binaria","Hidratada"], a:0, e:"Conserva un hidrógeno del ácido carbónico; por eso es una sal poliatómica ácida."},
+  {q:"El CaCO3 (mármol, gis, cascarón de huevo) se llama:", o:["Carbonato de calcio","Carburo de calcio","Carbonito de calcio","Óxido de calcio"], a:0, e:"Viene del ácido carbónico (-ico) → carbonato (-ato)."}
+ ]},
+
+// ===================== ETAPA 4 =====================
+{id:"e4t1", et:4, icon:"⚗️", titulo:"Reacción y ecuación química", pag:"pp. 177–181",
+ resumen:"En una reacción química los reactivos se transforman en productos. La ecuación química es la forma de escribirla con símbolos.",
+ puntos:[
+  "<b>Reacción química:</b> proceso en el que unas sustancias (<b>reactivos</b>) se transforman en otras nuevas (<b>productos</b>).",
+  "<b>Ecuación química:</b> representación con fórmulas. Reactivos → productos.",
+  "<b>Coeficiente:</b> número grande delante de la fórmula (cuántas moléculas o moles). <b>Subíndice:</b> número pequeño dentro de la fórmula (cuántos átomos); <b>nunca se cambia</b> al balancear.",
+  "<b>Símbolos:</b> (s) sólido · (l) líquido · (g) gas · (ac) acuoso, disuelto en agua · → produce · ⇄ reversible · Δ calor · ↑ gas que se desprende · ↓ precipitado.",
+  "<b>Evidencias de reacción:</b> cambio de color, burbujas (gas), formación de un sólido (precipitado), cambio de temperatura, luz u olor."],
+ info:[{type:"equation", titulo:"Anatomía de una ecuación"},
+  {type:"cards", titulo:"Evidencias de una reacción", items:[{i:"🎨",t:"Cambio de color",d:"Manzana que se oscurece"},{i:"🫧",t:"Gas / burbujas",d:"Vinagre + bicarbonato"},{i:"🧊",t:"Precipitado",d:"Sólido que aparece en un líquido"},{i:"🌡️",t:"Temperatura",d:"Se calienta o se enfría"},{i:"💡",t:"Luz",d:"Combustión, bengalas"},{i:"👃",t:"Olor",d:"Alimento descompuesto"}]}],
+ truco:"<b>Coeficiente = grande y adelante</b> (sí lo cambias al balancear). <b>Subíndice = pequeño y abajo</b> (nunca lo cambias, cambiaría la sustancia).",
+ videos:[{t:"Introducción a las reacciones químicas",u:TU+"ycxmb7ex"}],
+ preguntas:[
+  {q:"En la ecuación CH4 + 2O2 → CO2 + 2H2O, ¿cuáles son los reactivos?", o:["CH4 y O2","CO2 y H2O","Solo CH4","CO2 y O2"], a:0, e:"Los reactivos están a la izquierda de la flecha; los productos, a la derecha."},
+  {q:"El símbolo (ac) junto a una fórmula indica que la sustancia está:", o:["Disuelta en agua","En estado sólido","En estado gaseoso","Caliente"], a:0, e:"(ac) = acuoso: la sustancia forma una disolución con agua."},
+  {q:"En la expresión 3H2O, el número 3 es el:", o:["Coeficiente","Subíndice","Número atómico","Superíndice"], a:0, e:"El coeficiente va adelante e indica cuántas moléculas hay: 3 moléculas de agua."},
+  {q:"¿Cuál de estas situaciones es evidencia de una reacción química?", o:["Se forman burbujas al mezclar bicarbonato y vinagre","El hielo se derrite","El azúcar se disuelve en agua","Un vidrio se rompe"], a:0, e:"Las burbujas son CO2, una sustancia nueva. Los demás son cambios físicos."},
+  {q:"El símbolo ↓ en un producto indica que:", o:["Se formó un precipitado (sólido)","Se desprende un gas","La reacción es reversible","Se absorbió calor"], a:0, e:"La flecha hacia abajo indica un sólido que se forma y se va al fondo."},
+  {q:"El símbolo Δ sobre la flecha indica que:", o:["Se aplica calor","Se usa un catalizador","La reacción es rápida","Hay luz"], a:0, e:"Δ significa que la reacción necesita calentamiento."}
+ ]},
+
+{id:"e4t2", et:4, icon:"⏱️", titulo:"Velocidad de reacción", pag:"pp. 181–182",
+ resumen:"Para que haya reacción, las partículas deben chocar con suficiente energía. La temperatura, la concentración, el tamaño de partícula y los catalizadores cambian la rapidez.",
+ puntos:[
+  "<b>Teoría de colisiones:</b> las partículas deben chocar con la orientación correcta y con suficiente energía (<b>energía de activación</b>).",
+  "<b>Naturaleza de los reactivos:</b> algunas sustancias reaccionan más fácilmente que otras.",
+  "<b>Temperatura:</b> a más temperatura, más rápido (más choques y con más energía). Por eso refrigeramos los alimentos.",
+  "<b>Concentración:</b> a más concentración, más choques → más rapidez.",
+  "<b>Área superficial (tamaño de partícula):</b> más pequeño = más superficie = más rápido (pastilla molida vs. entera).",
+  "<b>Catalizadores:</b> aceleran la reacción sin consumirse; las <b>enzimas</b> son catalizadores biológicos. Los inhibidores la hacen más lenta."],
+ info:[{type:"cards", titulo:"¿Qué acelera una reacción?", items:[{i:"🔥",t:"↑ Temperatura",d:"Más choques con energía"},{i:"🧪",t:"↑ Concentración",d:"Más partículas, más choques"},{i:"🔨",t:"↓ Tamaño de partícula",d:"Más superficie de contacto"},{i:"🧬",t:"Catalizador",d:"Baja la energía de activación"}]}],
+ truco:"Piensa en <b>choques</b>: todo lo que provoque más choques o choques con más energía <b>acelera</b> la reacción.",
+ videos:[{t:"Velocidad de reacción y equilibrio químico",u:TU+"3jukte9a"},{t:"Factores que afectan la velocidad de reacción",u:TU+"y7kj4crj"}],
+ preguntas:[
+  {q:"Guardar la comida en el refrigerador retrasa que se eche a perder porque:", o:["Disminuye la temperatura y las reacciones son más lentas","Aumenta la concentración","Funciona como catalizador","Aumenta el área superficial"], a:0, e:"A menor temperatura las partículas chocan menos y con menos energía."},
+  {q:"Una pastilla efervescente molida reacciona más rápido que entera por el factor:", o:["Área superficial","Temperatura","Concentración","Naturaleza de los reactivos"], a:0, e:"Al molerla, más partículas quedan expuestas al agua: más superficie de contacto."},
+  {q:"Un catalizador es una sustancia que:", o:["Acelera la reacción sin consumirse","Se consume por completo en la reacción","Siempre detiene la reacción","Es uno de los productos"], a:0, e:"El catalizador disminuye la energía de activación y al final se recupera sin cambios."},
+  {q:"Las enzimas del cuerpo humano funcionan como:", o:["Catalizadores biológicos","Inhibidores","Reactivos limitantes","Precipitados"], a:0, e:"Las enzimas aceleran las reacciones de la digestión y del metabolismo."},
+  {q:"Si se usa un ácido más concentrado para disolver un metal, la reacción:", o:["Es más rápida","Es más lenta","No cambia","Se detiene"], a:0, e:"Hay más partículas de ácido en el mismo volumen, por lo tanto más choques por segundo."},
+  {q:"La energía mínima necesaria para que inicie una reacción se llama:", o:["Energía de activación","Calor de reacción","Energía cinética","Entalpía de fusión"], a:0, e:"Es la «barrera» que deben superar los reactivos para romper enlaces y empezar a reaccionar."}
+ ]},
+
+{id:"e4t3", et:4, icon:"⚖️", titulo:"Conservación de la masa y balanceo por tanteo", pag:"pp. 183–184, 189",
+ resumen:"Como la masa se conserva (Lavoisier), una ecuación debe tener el mismo número de átomos de cada elemento en ambos lados. Se balancea cambiando solo coeficientes.",
+ puntos:[
+  "<b>Ley de la conservación de la masa (Lavoisier):</b> en una reacción, la masa total de los reactivos es igual a la masa total de los productos.",
+  "<b>Balancear</b> = igualar el número de átomos de cada elemento en ambos lados.",
+  "<b>Tanteo, paso a paso:</b> 1) cuenta los átomos de cada lado; 2) balancea primero los metales; 3) luego los no metales; 4) al final H y O; 5) comprueba.",
+  "<b>Regla de oro:</b> solo cambias <b>coeficientes</b>, nunca subíndices.",
+  "<b>Ejemplo:</b> CH4 + O2 → CO2 + H2O. C: 1 = 1 ✔️. H: 4 vs 2 → 2H2O. O: 2 vs 4 → 2O2. Resultado: CH4 + 2O2 → CO2 + 2H2O."],
+ info:[{type:"steps", titulo:"Balanceemos: CH4 + O2 → CO2 + H2O", items:[
+   {t:"1. Cuenta",d:"C 1|1 · H 4|2 · O 2|3"},{t:"2. Carbono",d:"Ya está: 1 = 1"},
+   {t:"3. Hidrógeno",d:"Pon 2 al agua: …+ 2H2O"},{t:"4. Oxígeno",d:"Derecha: 2 + 2 = 4 → 2O2"},
+   {t:"5. Comprueba",d:"CH4 + 2O2 → CO2 + 2H2O ✔️"}]}],
+ truco:"Cuando termines, haz una tabla rápida de átomos (izquierda | derecha). Si todos coinciden, ya está balanceada.",
+ videos:[{t:"Simulador de balanceo de ecuaciones",u:TU+"3hmpubjk"},{t:"Ley de la conservación de la materia",u:TU+"25mkc6wa"},{t:"Simulador para balancear (actividad del libro)",u:TU+"y3d488ud"}],
+ preguntas:[
+  {q:"¿Cuáles son los coeficientes que balancean H2 + O2 → H2O?", o:["2, 1, 2","1, 1, 1","1, 2, 2","2, 2, 1"], a:0, e:"2H2 + O2 → 2H2O: 4 H y 2 O en cada lado."},
+  {q:"Al balancear una ecuación, ¿qué NO se debe cambiar?", o:["Los subíndices","Los coeficientes","El orden de los productos","Nada, todo se puede cambiar"], a:0, e:"Cambiar un subíndice cambia la sustancia (H2O no es lo mismo que H2O2)."},
+  {q:"¿Cuáles son los coeficientes que balancean N2 + H2 → NH3?", o:["1, 3, 2","1, 1, 2","2, 3, 2","1, 3, 1"], a:0, e:"N2 + 3H2 → 2NH3: 2 N y 6 H en cada lado."},
+  {q:"Si 10 g de A reaccionan totalmente con 5 g de B y solo se forma C, ¿cuánta masa de C se obtiene?", o:["15 g","5 g","10 g","50 g"], a:0, e:"Por la ley de conservación de la masa: 10 g + 5 g = 15 g."},
+  {q:"¿Cuáles son los coeficientes que balancean Fe + O2 → Fe2O3?", o:["4, 3, 2","2, 3, 1","4, 3, 1","2, 1, 1"], a:0, e:"4Fe + 3O2 → 2Fe2O3: 4 Fe y 6 O en cada lado."},
+  {q:"En CH4 + 2O2 → CO2 + 2H2O, ¿cuántos átomos de oxígeno hay en los productos?", o:["4","2","3","6"], a:0, e:"CO2 aporta 2 y 2H2O aporta 2 × 1 = 2. Total: 4 (igual que en 2O2)."},
+  {q:"¿Cuáles son los coeficientes que balancean Al + HCl → AlCl3 + H2?", o:["2, 6, 2, 3","1, 3, 1, 1","2, 3, 2, 3","1, 6, 1, 3"], a:0, e:"2Al + 6HCl → 2AlCl3 + 3H2: 2 Al, 6 H y 6 Cl en cada lado."}
+ ]},
+
+{id:"e4t4", et:4, icon:"🔀", titulo:"Clasificación de las reacciones químicas", pag:"pp. 185–187",
+ resumen:"Las reacciones se clasifican por lo que les pasa a los átomos (síntesis, descomposición, sustitución simple o doble), por la energía (exo/endo) y por su sentido (reversibles o no).",
+ puntos:[
+  "<b>Síntesis o combinación:</b> A + B → AB. Ej.: C + O2 → CO2.",
+  "<b>Descomposición o análisis:</b> AB → A + B (suele requerir calor Δ). Ej.: CaCO3 → CaO + CO2.",
+  "<b>Sustitución (desplazamiento) simple:</b> A + BC → AC + B. Ej.: Zn + 2HCl → ZnCl2 + H2.",
+  "<b>Doble sustitución:</b> AB + CD → AD + CB (intercambian iones). Ej.: NaOH + HCl → NaCl + H2O (neutralización).",
+  "<b>Por energía:</b> <b>exotérmicas</b> liberan calor o luz (combustión); <b>endotérmicas</b> absorben energía (fotosíntesis).",
+  "<b>Por su sentido:</b> irreversibles (→) y reversibles (⇄)."],
+ info:[{type:"cards", titulo:"Los 4 tipos con «letras»", items:[{i:"🤝",t:"Síntesis",d:"A + B → AB"},{i:"💥",t:"Descomposición",d:"AB → A + B"},{i:"🔄",t:"Sustitución simple",d:"A + BC → AC + B"},{i:"💃",t:"Doble sustitución",d:"AB + CD → AD + CB"}]},
+  {type:"table", titulo:"Por la energía", head:["Tipo","¿Qué pasa?","Ejemplo"], rows:[["Exotérmica 🔥","Libera calor/luz (ΔH negativo)","Combustión del gas"],["Endotérmica ❄️","Absorbe energía (ΔH positivo)","Fotosíntesis"]]}],
+ truco:"Fíjate en cuántas sustancias hay a cada lado: <b>2 → 1</b> síntesis · <b>1 → 2</b> descomposición · <b>elemento + compuesto</b> sustitución simple · <b>compuesto + compuesto</b> que intercambian «parejas» = doble sustitución.",
+ videos:[{t:"Tipos de reacciones químicas",u:TU+"yzu6w5tm"},{t:"Clasificación de las reacciones químicas",u:TU+"3ftd7sk7"}],
+ preguntas:[
+  {q:"CaCO3 → CaO + CO2 (con calor) es una reacción de:", o:["Descomposición","Síntesis","Sustitución simple","Doble sustitución"], a:0, e:"Un solo reactivo se divide en dos productos."},
+  {q:"Zn + 2HCl → ZnCl2 + H2 es una reacción de:", o:["Sustitución simple","Síntesis","Descomposición","Doble sustitución"], a:0, e:"El zinc (elemento) desplaza al hidrógeno de su compuesto y lo libera."},
+  {q:"NaOH + HCl → NaCl + H2O es una reacción de:", o:["Doble sustitución (neutralización)","Síntesis","Descomposición","Combustión"], a:0, e:"Los dos compuestos intercambian iones; además es ácido + base → sal + agua."},
+  {q:"C + O2 → CO2 es una reacción de:", o:["Síntesis","Descomposición","Sustitución simple","Doble sustitución"], a:0, e:"Dos reactivos se combinan para formar un solo producto (también es una combustión)."},
+  {q:"La fotosíntesis (6CO2 + 6H2O + energía solar → C6H12O6 + 6O2) es una reacción:", o:["Endotérmica","Exotérmica","De doble sustitución","Irreversible de combustión"], a:0, e:"Las plantas absorben energía de la luz solar para que ocurra: es endotérmica."},
+  {q:"La combustión del gas en la estufa es una reacción:", o:["Exotérmica","Endotérmica","De descomposición","De doble sustitución"], a:0, e:"Libera calor y luz hacia el entorno."},
+  {q:"El símbolo ⇄ en una ecuación indica que la reacción es:", o:["Reversible","Irreversible","Exotérmica","Muy lenta"], a:0, e:"La doble flecha indica que ocurre en ambos sentidos: los productos pueden volver a formar los reactivos."}
+ ]},
+
+{id:"e4t5", et:4, icon:"🧮", titulo:"Mol, masa molar y número de Avogadro", pag:"pp. 189–192",
+ resumen:"El mol es la «docena» de la química: 1 mol = 6.022×10^23 partículas. La masa molar dice cuántos gramos pesa 1 mol.",
+ puntos:[
+  "<b>Mol:</b> cantidad de sustancia que contiene <b>6.022×10^23</b> partículas (átomos, moléculas, iones). Ese número es el <b>número de Avogadro</b>.",
+  "<b>Masa molar (g/mol):</b> masa de 1 mol. Se calcula sumando las masas atómicas de la fórmula.",
+  "<b>Ejemplo:</b> H2SO4 → H: 2 × 1 = 2 · S: 1 × 32 = 32 · O: 4 × 16 = 64 → <b>98 g/mol</b>.",
+  "<b>Fórmulas clave:</b> moles = gramos ÷ masa molar · gramos = moles × masa molar · partículas = moles × 6.022×10^23.",
+  "Masas atómicas útiles: H 1 · C 12 · N 14 · O 16 · Na 23 · Mg 24 · S 32 · Cl 35.5 · Ca 40."],
+ info:[{type:"triangle", titulo:"El puente del mol"}],
+ truco:"Para la masa molar haz una mini tabla: <b>elemento × cuántos átomos × masa</b> y suma. ¡No olvides los subíndices que multiplican a un paréntesis!",
+ videos:[{t:"¿Qué es un mol?",u:TU+"yfhkf5md"},{t:"¿Cómo se ha medido el mol?",u:TU+"4pmfn6cu"}],
+ preguntas:[
+  {q:"¿Cuál es la masa molar del agua (H2O)? (H = 1, O = 16)", o:["18 g/mol","17 g/mol","34 g/mol","16 g/mol"], a:0, e:"2(1) + 16 = 18 g/mol."},
+  {q:"¿Cuál es la masa molar del CO2? (C = 12, O = 16)", o:["44 g/mol","28 g/mol","40 g/mol","32 g/mol"], a:0, e:"12 + 2(16) = 44 g/mol."},
+  {q:"¿Cuántos moles hay en 117 g de NaCl? (masa molar = 58.5 g/mol)", o:["2 mol","1 mol","0.5 mol","117 mol"], a:0, e:"moles = 117 g ÷ 58.5 g/mol = 2 mol."},
+  {q:"Un mol de cualquier sustancia contiene:", o:["6.022×10^23 partículas","1000 partículas","12 partículas","6.022×10^-23 partículas"], a:0, e:"Ese es el número de Avogadro."},
+  {q:"¿Cuántos gramos son 3 mol de agua? (masa molar = 18 g/mol)", o:["54 g","6 g","18 g","21 g"], a:0, e:"gramos = 3 mol × 18 g/mol = 54 g."},
+  {q:"¿Cuál es la masa molar del H2SO4? (H = 1, S = 32, O = 16)", o:["98 g/mol","49 g/mol","96 g/mol","50 g/mol"], a:0, e:"2(1) + 32 + 4(16) = 2 + 32 + 64 = 98 g/mol."},
+  {q:"¿Cuántas moléculas hay en 2 mol de CO2?", o:["1.2044×10^24","6.022×10^23","3.011×10^23","2×10^23"], a:0, e:"2 × 6.022×10^23 = 12.044×10^23 = 1.2044×10^24 moléculas."}
+ ]},
+
+{id:"e4t6", et:4, icon:"📐", titulo:"Relaciones estequiométricas (mol-mol y masa-masa)", pag:"pp. 192–197",
+ resumen:"Los coeficientes de una ecuación balanceada son una «receta» en moles. Con ellos calculas cuánto producto se obtiene o cuánto reactivo se necesita.",
+ puntos:[
+  "<b>Los coeficientes indican la proporción en moles.</b> En N2 + 3H2 → 2NH3: 1 mol de N2 reacciona con 3 mol de H2 y produce 2 mol de NH3.",
+  "<b>Mol-mol:</b> multiplica por la relación de coeficientes (lo que buscas ÷ lo que tienes).",
+  "<b>Masa-masa (3 pasos):</b> gramos del dato → ÷ masa molar → moles → × relación de coeficientes → moles de lo buscado → × masa molar → gramos.",
+  "<b>Ejemplo:</b> 2H2 + O2 → 2H2O. ¿Cuántos g de agua se forman con 4 g de H2? 4 ÷ 2 = 2 mol H2 → 2 mol H2O → 2 × 18 = <b>36 g</b>.",
+  "<b>Primero, siempre:</b> verifica que la ecuación esté balanceada."],
+ info:[{type:"steps", titulo:"Ruta masa → masa", items:[{t:"Gramos de A",d:"Dato del problema"},{t:"÷ masa molar de A",d:"Obtienes moles de A"},{t:"× coeficientes",d:"(coef. B ÷ coef. A)"},{t:"× masa molar de B",d:"Obtienes gramos de B"}]}],
+ truco:"Nunca pases directo de gramos a gramos: <b>siempre pasa por moles</b>. La ecuación «habla» en moles, no en gramos.",
+ videos:[{t:"Estequiometría",u:TU+"37aywvp6"},{t:"Simulador de reacciones químicas",u:TU+"5hehkmne"}],
+ preguntas:[
+  {q:"En N2 + 3H2 → 2NH3, ¿cuántos moles de NH3 se forman con 2 mol de N2?", o:["4 mol","2 mol","6 mol","3 mol"], a:0, e:"Relación 1 N2 : 2 NH3 → 2 mol × 2 = 4 mol de NH3."},
+  {q:"En N2 + 3H2 → 2NH3, ¿cuántos moles de H2 se necesitan para producir 6 mol de NH3?", o:["9 mol","6 mol","3 mol","18 mol"], a:0, e:"Relación 3 H2 : 2 NH3 → 6 × (3 ÷ 2) = 9 mol de H2."},
+  {q:"En 2H2 + O2 → 2H2O, ¿cuántos gramos de agua se forman con 4 mol de H2? (H2O = 18 g/mol)", o:["72 g","36 g","18 g","144 g"], a:0, e:"Relación 2:2 → 4 mol de H2O × 18 g/mol = 72 g."},
+  {q:"En CH4 + 2O2 → CO2 + 2H2O, ¿cuántos gramos de CO2 se forman al quemar 16 g de CH4? (CH4 = 16 g/mol, CO2 = 44 g/mol)", o:["44 g","16 g","22 g","88 g"], a:0, e:"16 g ÷ 16 = 1 mol CH4 → 1 mol CO2 (relación 1:1) → 1 × 44 = 44 g."},
+  {q:"En un problema masa-masa, el primer paso para trabajar con la ecuación es:", o:["Convertir los gramos a moles dividiendo entre la masa molar","Multiplicar los gramos por los coeficientes","Sumar todas las masas","Cambiar los subíndices"], a:0, e:"Los coeficientes relacionan moles, así que primero hay que pasar los gramos a moles."},
+  {q:"En 2Na + Cl2 → 2NaCl, ¿cuántos gramos de NaCl se obtienen con 46 g de Na? (Na = 23, NaCl = 58.5 g/mol)", o:["117 g","58.5 g","46 g","234 g"], a:0, e:"46 ÷ 23 = 2 mol Na → 2 mol NaCl (2:2) → 2 × 58.5 = 117 g."}
+ ]}
+];
+
+// ================================================================
+//  CONFIGURACIÓN — edita estas líneas si lo necesitas
+// ================================================================
+const FECHA_EXAMEN = "2026-11-23";   // Fecha del examen global (AAAA-MM-DD). Déjala "" para ocultar la cuenta regresiva.
+const PREGUNTAS_SIMULACRO_POR_ETAPA = 5; // 5 x 4 etapas = 20 preguntas
+
+// ================================================================
+//  Utilidades
+// ================================================================
+const $ = (s, el = document) => el.querySelector(s);
+const app = () => $("#app");
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+// Formato químico: H2O -> H<sub>2</sub>O ; SO4^2- -> SO<sub>4</sub><sup>2−</sup>
+function cf(s){
+  return String(s)
+    .replace(/([A-Za-z\)])(\d+)/g, "$1<sub>$2</sub>")
+    .replace(/\^(-?\d+[+\-]?|[+\-])/g, (m, g) => "<sup>" + g.replace(/-/g, "−") + "</sup>");
+}
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const etapa = n => ETAPAS.find(e => e.n === n);
+const temasDe = n => TEMAS.filter(t => t.et === n);
+const pct = (a, b) => b ? Math.round(a * 100 / b) : 0;
+const lvl = p => p >= 80 ? "ok" : p >= 60 ? "mid" : "bad";
+const lvlTxt = p => p >= 80 ? "¡Dominas!" : p >= 60 ? "En proceso" : "Prioridad";
+const hoy = () => new Date().toLocaleDateString("es-MX", {day:"2-digit", month:"long", year:"numeric"});
+
+// ---------- Almacenamiento (con respaldo en memoria) ----------
+const KEY = "lmt_global_2026";
+let MEM = {};
+function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ return MEM; } }
+function save(d){ MEM = d; try { localStorage.setItem(KEY, JSON.stringify(d)); } catch(e){} }
+function st(){ const d = load(); d.temas = d.temas || {}; d.sims = d.sims || []; d.alumno = d.alumno || {nombre:"", grupo:""}; return d; }
+
+// ---------- Confeti ----------
+function burst(){
+  const em = ["⚛️","🧪","⭐","🎉","✨","🔥"];
+  for (let i = 0; i < 26; i++){
+    const s = document.createElement("span"); s.className = "burst";
+    s.textContent = em[i % em.length];
+    s.style.left = (50 + (Math.random() * 20 - 10)) + "vw"; s.style.top = "55vh";
+    s.style.setProperty("--x", (Math.random() * 90 - 45) + "vw");
+    s.style.setProperty("--y", (-Math.random() * 60 - 10) + "vh");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1500);
+  }
+}
+
+// ================================================================
+//  Infografías
+// ================================================================
+function renderInfo(inf){
+  let h = `<div class="info"><h4>${esc(inf.titulo || "")}</h4>`;
+  if (inf.type === "tree"){
+    const node = (n, root) => {
+      let x = `<div class="node ${root ? "root" : ""}">${cf(n.t)}${n.d ? `<small>${cf(n.d)}</small>` : ""}</div>`;
+      if (n.c && n.c.length) x += `<div class="kids">${n.c.map(k => `<div class="br">${node(k)}</div>`).join("")}</div>`;
+      return x;
+    };
+    h += `<div class="tree">${node(inf.root, true)}</div>`;
+  } else if (inf.type === "cards"){
+    h += `<div class="icards">${inf.items.map(i => `<div class="icard"><div class="e">${i.i}</div><b>${cf(i.t)}</b><span>${cf(i.d)}</span></div>`).join("")}</div>`;
+  } else if (inf.type === "steps"){
+    h += `<div class="steps">${inf.items.map(i => `<div class="step"><b>${cf(i.t)}</b><span>${cf(i.d)}</span></div>`).join("")}</div>`;
+  } else if (inf.type === "table"){
+    h += `<table class="t"><tr>${inf.head.map(x => `<th>${cf(x)}</th>`).join("")}</tr>${inf.rows.map(r => `<tr>${r.map(c => `<td>${cf(c)}</td>`).join("")}</tr>`).join("")}</table>`;
+  } else if (inf.type === "chips"){
+    h += `<div class="chips">${inf.items.map((c, i) => `<span class="chip ${c.slice(-1)}">${c}</span>${i < inf.items.length - 1 ? '<span class="arrow">→</span>' : ""}`).join("")}</div>
+          <div class="legend"><span><i style="background:#2f6bff"></i>s (2 e⁻)</span><span><i style="background:#00a88f"></i>p (6 e⁻)</span><span><i style="background:#8b3dff"></i>d (10 e⁻)</span><span><i style="background:#ff6b2c"></i>f (14 e⁻)</span></div>`;
+  } else if (inf.type === "ptable"){
+    h += ptable(inf.mode);
+  } else if (inf.type === "lewis"){
+    const L = [
+      ["H₂O", "   ••\nH — O — H\n   ••", "O central · 2 pares libres"],
+      ["CO₂", "••       ••\nO = C = O\n••       ••", "Dos enlaces dobles"],
+      ["N₂", "\n:N ≡ N:\n", "Enlace triple"],
+      ["Cl₂", " ••   •• \n:Cl — Cl:\n ••   •• ", "Enlace sencillo"]];
+    h += `<div class="lewis">${L.map(x => `<figure><pre>${esc(x[1])}</pre><figcaption><b>${x[0]}</b> · ${x[2]}</figcaption></figure>`).join("")}</div>
+          <p class="muted" style="margin:.6em 0 0;font-size:.85rem">Cada línea (—) es un par de electrones compartido; cada par de puntos (••) es un par libre.</p>`;
+  } else if (inf.type === "enscale"){
+    h += `<div class="scale"><div style="flex:4;background:#2f6bff">Covalente<br>no polar</div><div style="flex:12;background:#00a88f">Covalente polar</div><div style="flex:17;background:#ff6b2c">Iónico</div></div>
+          <div class="ticks"><span>0</span><span>0.4</span><span>1.7</span><span>3.3</span></div>
+          <div class="icards" style="margin-top:12px">
+            <div class="icard"><div class="e">🫧</div><b>O₂</b><span>3.5 − 3.5 = 0 → no polar</span></div>
+            <div class="icard"><div class="e">💧</div><b>H₂O (O–H)</b><span>3.5 − 2.1 = 1.4 → polar</span></div>
+            <div class="icard"><div class="e">🧂</div><b>NaCl</b><span>3.0 − 0.9 = 2.1 → iónico</span></div>
+            <div class="icard"><div class="e">🔌</div><b>Cu (metal)</b><span>«mar de electrones» → metálico</span></div></div>`;
+  } else if (inf.type === "equation"){
+    h += `<div class="eq">
+      <span class="p"><span><span class="co">2</span>H<sub>2</sub><span class="st">(g)</span></span><small>coeficiente · subíndice · estado</small></span>
+      <span class="p"><span>+</span><small>&nbsp;</small></span>
+      <span class="p"><span>O<sub>2</sub><span class="st">(g)</span></span><small>reactivo</small></span>
+      <span class="p"><span>→</span><small>produce</small></span>
+      <span class="p"><span><span class="co">2</span>H<sub>2</sub>O<span class="st">(l)</span></span><small>producto</small></span></div>
+      <div class="row" style="justify-content:center;font-size:.85rem"><span class="pill" style="background:#fdecec;color:#d71920">Rojo = coeficiente</span><span class="pill" style="background:#e6f7f3;color:#00806c">Verde = estado físico</span><span class="pill">Izquierda: reactivos · Derecha: productos</span></div>`;
+  } else if (inf.type === "triangle"){
+    h += `<div class="bridge">
+      <div class="bx">⚖️ Gramos</div>
+      <div class="ar"><span>÷ masa molar</span><b>⇄</b><span>× masa molar</span></div>
+      <div class="bx mid">🧮 MOLES</div>
+      <div class="ar"><span>× 6.022×10²³</span><b>⇄</b><span>÷ 6.022×10²³</span></div>
+      <div class="bx">🔬 Partículas</div></div>
+      <p class="muted" style="text-align:center;margin:.8em 0 0;font-size:.88rem">El mol siempre está en el centro: para ir de gramos a partículas (o al revés) pasa por moles.</p>`;
+  }
+  return h + "</div>";
+}
+
+function ptable(mode){
+  const R = [
+    "H,,,,,,,,,,,,,,,,,He",
+    "Li,Be,,,,,,,,,,,B,C,N,O,F,Ne",
+    "Na,Mg,,,,,,,,,,,Al,Si,P,S,Cl,Ar",
+    "K,Ca,Sc,Ti,V,Cr,Mn,Fe,Co,Ni,Cu,Zn,Ga,Ge,As,Se,Br,Kr",
+    "Rb,Sr,Y,Zr,Nb,Mo,Tc,Ru,Rh,Pd,Ag,Cd,In,Sn,Sb,Te,I,Xe",
+    "Cs,Ba,*,Hf,Ta,W,Re,Os,Ir,Pt,Au,Hg,Tl,Pb,Bi,Po,At,Rn",
+    "Fr,Ra,**,Rf,Db,Sg,Bh,Hs,Mt,Ds,Rg,Cn,Nh,Fl,Mc,Lv,Ts,Og"].map(r => r.split(","));
+  const F = [",,*,La,Ce,Pr,Nd,Pm,Sm,Eu,Gd,Tb,Dy,Ho,Er,Tm,Yb,Lu".split(","), ",,**,Ac,Th,Pa,U,Np,Pu,Am,Cm,Bk,Cf,Es,Fm,Md,No,Lr".split(",")];
+  const NM = ["H","C","N","O","F","P","S","Cl","Se","Br","I","He","Ne","Ar","Kr","Xe","Rn","Og"];
+  const MD = ["B","Si","Ge","As","Sb","Te","At"];
+  const colB = {s:"#2f6bff", p:"#00a88f", d:"#8b3dff", f:"#ff6b2c"};
+  const colT = {m:"#5b6ee1", nm:"#18a957", md:"#f0a500", gn:"#00a2c7"};
+  const cell = (sym, col, isF) => {
+    if (!sym) return `<div class="e0"></div>`;
+    let c;
+    if (mode === "bloques"){
+      const b = isF || sym.startsWith("*") ? "f" : sym === "He" ? "s" : col <= 2 ? "s" : col <= 12 ? "d" : "p";
+      c = colB[b];
+    } else {
+      c = ["He","Ne","Ar","Kr","Xe","Rn","Og"].includes(sym) ? colT.gn : NM.includes(sym) ? colT.nm : MD.includes(sym) ? colT.md : colT.m;
+    }
+    return `<div style="background:${c}" title="${sym}">${sym}</div>`;
+  };
+  let h = `<div class="pt">`;
+  R.forEach(r => r.forEach((s, i) => h += cell(s, i + 1)));
+  for (let i = 0; i < 18; i++) h += `<div class="e0" style="aspect-ratio:3"></div>`;
+  F.forEach(r => { for (let i = 0; i < 18; i++) h += cell(r[i] || "", i + 1, !!r[i] && i > 2); });
+  h += `</div>`;
+  h += mode === "bloques"
+    ? `<div class="legend"><span><i style="background:${colB.s}"></i>Bloque s (grupos 1–2)</span><span><i style="background:${colB.d}"></i>Bloque d (transición)</span><span><i style="background:${colB.p}"></i>Bloque p (grupos 13–18)</span><span><i style="background:${colB.f}"></i>Bloque f (lantánidos y actínidos)</span></div>`
+    : `<div class="legend"><span><i style="background:${colT.m}"></i>Metales</span><span><i style="background:${colT.md}"></i>Metaloides</span><span><i style="background:${colT.nm}"></i>No metales</span><span><i style="background:${colT.gn}"></i>Gases nobles</span></div>`;
+  return h + `<p class="muted" style="font-size:.78rem;margin:.5em 0 0">Desliza horizontalmente si estás en celular 📱</p>`;
+}
+
+// ================================================================
+//  Motor de preguntas (una por una, con retroalimentación inmediata)
+// ================================================================
+function runQuiz(opts){
+  // opts: {qs:[{q,o,a,e,et?}], color, color2, title, onFinish(results)}
+  const qs = opts.qs.map(q => {
+    const order = shuffle(q.o.map((t, i) => i));
+    return {...q, ord: order};
+  });
+  let i = 0, good = 0; const res = [];
+  const box = opts.mount;
+  box.style.setProperty("--c", opts.color); box.style.setProperty("--c2", opts.color2);
+  function show(){
+    const q = qs[i];
+    box.innerHTML = `<div class="quiz">
+      <div class="qtop"><span>${esc(opts.title)}</span><span>Pregunta ${i + 1} de ${qs.length} · ✅ ${good}</span></div>
+      <div class="qbar"><i style="width:${pct(i, qs.length)}%"></i></div>
+      <div class="qtext">${cf(q.q)}</div>
+      <div class="opts">${q.ord.map((oi, k) => `<button class="opt" data-oi="${oi}"><span class="k">${"ABCD"[k]}</span><span>${cf(q.o[oi])}</span></button>`).join("")}</div>
+      <div id="fbx"></div></div>`;
+    box.querySelectorAll(".opt").forEach(b => b.onclick = () => answer(+b.dataset.oi));
+  }
+  function answer(oi){
+    const q = qs[i], ok = oi === q.a;
+    if (ok) good++;
+    res.push({q, chosen: oi, ok});
+    box.querySelectorAll(".opt").forEach(b => {
+      b.disabled = true; const v = +b.dataset.oi;
+      if (v === q.a) b.classList.add("ok"); else if (v === oi) b.classList.add("bad");
+    });
+    const last = i === qs.length - 1;
+    $("#fbx", box).innerHTML = `<div class="fb ${ok ? "ok" : "bad"}">
+      <b class="h">${ok ? "✅ ¡Correcto! Así se reafirma:" : "❌ No es correcto."}</b>
+      ${ok ? "" : `Elegiste: <i>${cf(q.o[oi])}</i>. La respuesta correcta es <b>${cf(q.o[q.a])}</b>.<br>`}
+      <span>💡 ${cf(q.e)}</span></div>
+      <div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn c" id="nx">${last ? "Ver resultados 🏁" : "Siguiente →"}</button></div>`;
+    $(".qtop span:last-child", box).textContent = `Pregunta ${i + 1} de ${qs.length} · ✅ ${good}`;
+    $(".qbar i", box).style.width = pct(i + 1, qs.length) + "%";
+    $("#nx", box).onclick = () => { i++; if (i < qs.length) { show(); box.scrollIntoView({behavior:"smooth", block:"start"}); } else opts.onFinish(res, good); };
+    $("#nx", box).focus({preventScroll:true});
+  }
+  show();
+}
+
+function reviewHTML(res){
+  const bad = res.filter(r => !r.ok);
+  if (!bad.length) return `<p>🎯 ¡No tuviste errores!</p>`;
+  return `<div class="review"><h3 style="font-size:1rem">Repasa tus errores (${bad.length})</h3>${bad.map(r => `<details><summary>${cf(r.q.q)}</summary><p>✔️ <b>${cf(r.q.o[r.q.a])}</b><br>💡 ${cf(r.q.e)}</p></details>`).join("")}</div>`;
+}
+
+// ================================================================
+//  Vistas
+// ================================================================
+function setTab(name){ document.querySelectorAll("nav.tabs a").forEach(a => a.classList.toggle("on", a.dataset.t === name)); }
+function setColor(c, c2){ document.documentElement.style.setProperty("--c", c || "#2f6bff"); document.documentElement.style.setProperty("--c2", c2 || "#7aa2ff"); }
+
+function vInicio(){
+  setTab("inicio"); setColor();
+  const d = st(); const totalQ = TEMAS.reduce((s, t) => s + t.preguntas.length, 0);
+  app().innerHTML = `
+  <section class="hero"><div class="atoms">⚛️</div>
+    <div class="logos" style="justify-content:space-between;position:relative;z-index:1"><img src="${LOGO_UANL}" alt="UANL"><img src="${LOGO_P1}" alt="Preparatoria No. 1"></div>
+    <span class="pill" style="background:var(--gold)">Examen global · Ago–Dic 2026</span>
+    <h1>¡Prepárate para el global de<br>La Materia y sus Transformaciones! 🚀</h1>
+    <p>Todo lo que necesitas repasar, organizado por etapa y por tema: explicaciones cortas, infografías, videos de tu libro y preguntas con retroalimentación al instante.</p>
+    <div class="kpis"><span class="kpi"><b>4</b> etapas</span><span class="kpi"><b>${TEMAS.length}</b> temas</span><span class="kpi"><b>${totalQ}</b> preguntas de práctica</span><span class="kpi"><b>25%</b> de tu calificación</span></div>
+    <div class="row"><a class="btn gold" href="#/diagnostico">🎯 Empezar diagnóstico</a><a class="btn ghost" href="#/etapas">📚 Ir a los temas</a></div>
+  </section>
+
+  <div class="card"><h2>🧪 ¿Qué es LMT?</h2>
+      <p><b>La Materia y sus Transformaciones</b> es la unidad de aprendizaje donde estudias de qué está hecho todo lo que te rodea, cómo se organizan los elementos, cómo se nombran los compuestos y cómo se transforman en las reacciones químicas.</p>
+      <p class="muted"><b>Propósito formativo:</b> que seas capaz de aplicar conocimientos sobre la conformación de la materia en el universo, la Tierra y tu entorno, considerando su organización, estructura, nomenclatura y composición química.</p></div>
+
+  <h2 style="margin:10px 0 12px">Las 4 etapas</h2>
+  <div class="grid g4">${ETAPAS.map(e => etCard(e, d)).join("")}</div>
+
+  <div class="card" style="margin-top:16px"><h2>👤 Tus datos</h2>
+    <p class="muted" style="margin-top:0">Se usan solo para tu constancia de avance (la puedes imprimir o guardar en PDF y mostrársela a tu maestro). Se guardan únicamente en este dispositivo.</p>
+    <div class="grid g2"><input class="inp" id="nom" placeholder="Nombre completo" value="${esc(d.alumno.nombre)}"><input class="inp" id="gru" placeholder="Grupo (ej. 115)" value="${esc(d.alumno.grupo)}"></div>
+    <div class="row" style="margin-top:10px"><button class="btn sm" id="gd">Guardar</button><span id="gdok" class="muted"></span></div></div>`;
+  $("#gd").onclick = () => { const x = st(); x.alumno = {nombre: $("#nom").value.trim(), grupo: $("#gru").value.trim()}; save(x); $("#gdok").textContent = "✔️ Guardado"; };
+}
+
+function etProgress(n, d){
+  const ts = temasDe(n); const done = ts.filter(t => (d.temas[t.id] || {}).best >= 70).length;
+  return {done, total: ts.length, p: pct(done, ts.length)};
+}
+function etCard(e, d){
+  const pr = etProgress(e.n, d);
+  const dg = d.diag && d.diag.por ? pct(d.diag.por[e.n], 5) : null;
+  const flag = dg === null ? "" : `<span class="flag ${dg >= 80 ? "okf" : dg >= 60 ? "mid" : ""}">${dg >= 80 ? "✔ Dominas" : dg >= 60 ? "◐ En proceso" : "⚠ Prioridad"}</span>`;
+  return `<a class="et-card" href="#/etapa/${e.n}" style="--c:${e.color};--c2:${e.color2}">${flag}<span class="big">${e.icon}</span>
+    <span class="n">Etapa ${e.n}</span><h3>${e.titulo}</h3><small>${e.lema}</small>
+    <div class="bar"><i style="width:${pr.p}%"></i></div><small>${pr.done}/${pr.total} temas superados</small></a>`;
+}
+
+function vEtapas(){
+  setTab("etapas"); setColor();
+  const d = st();
+  let rec = "";
+  if (d.diag && d.diag.por){
+    const ord = ETAPAS.slice().sort((a, b) => d.diag.por[a.n] - d.diag.por[b.n]);
+    rec = `<div class="card"><h3>🧭 Tu ruta recomendada (según tu diagnóstico)</h3><div class="row">${ord.map((e, k) => `<a class="pill" style="background:${e.color};color:#fff;text-decoration:none;padding:7px 12px" href="#/etapa/${e.n}">${k + 1}. Etapa ${e.n} · ${d.diag.por[e.n]}/5</a>`).join("")}</div></div>`;
+  } else rec = `<div class="card row" style="justify-content:space-between"><span>💡 ¿No sabes por dónde empezar? Haz el diagnóstico y te diremos qué etapa repasar primero.</span><a class="btn sm gold" href="#/diagnostico">Hacer diagnóstico</a></div>`;
+  app().innerHTML = `<h1>📚 Estudia por etapa</h1>${rec}<div class="grid g2">${ETAPAS.map(e => etCard(e, d)).join("")}</div>`;
+}
+
+function vEtapa(n){
+  const e = etapa(n); if (!e) return vEtapas();
+  setTab("etapas"); setColor(e.color, e.color2);
+  const d = st();
+  app().innerHTML = `<div class="thead"><span class="big">${e.icon}</span><div class="crumb"><a href="#/etapas">Etapas</a> › Etapa ${n}</div>
+    <h1 style="margin-top:6px">Etapa ${n}. ${e.titulo}</h1><p style="margin:0;opacity:.95"><b>${e.lema}.</b> ${e.proposito}</p></div>
+    <div class="grid tlist">${temasDe(n).map((t, k) => { const b = (d.temas[t.id] || {}).best;
+      return `<a href="#/tema/${t.id}"><span class="ic">${t.icon}</span><span class="tt"><b>${n}.${k + 1} ${cf(t.titulo)}</b><small class="muted">Libro ${t.pag} · ${t.preguntas.length} preguntas</small></span>
+      <span class="score ${b === undefined ? "" : lvl(b)}">${b === undefined ? "Sin intentar" : b + "%"}</span></a>`; }).join("")}</div>
+    <div class="row" style="margin-top:16px"><button class="btn c" id="mini">⚡ Mini simulacro de la Etapa ${n} (10 preguntas)</button></div><div id="qm" style="margin-top:14px"></div>`;
+  $("#mini").onclick = () => {
+    const pool = shuffle(temasDe(n).flatMap(t => t.preguntas)).slice(0, 10);
+    runQuiz({qs: pool, color: e.color, color2: e.color2, title: `Mini simulacro · Etapa ${n}`, mount: $("#qm"),
+      onFinish: (res, g) => { $("#qm").innerHTML = resultCard(g, res.length, e.color, e.color2, reviewHTML(res), `<button class="btn c" onclick="vEtapa(${n})">Volver a la etapa</button>`); if (pct(g, res.length) >= 80) burst(); }});
+    $("#qm").scrollIntoView({behavior:"smooth"});
+  };
+}
+
+function resultCard(g, n, c, c2, extra, btns){
+  const p = pct(g, n); const stars = p >= 90 ? 3 : p >= 70 ? 2 : p >= 50 ? 1 : 0;
+  const msg = p >= 90 ? "¡Excelente! Estás listo para el examen 🏆" : p >= 70 ? "¡Muy bien! Repasa tus errores y lo dominas 💪" : p >= 50 ? "Vas avanzando. Vuelve a leer el resumen y reintenta 📖" : "Hay temas por reforzar: lee los resúmenes, mira los videos y vuelve a intentarlo 🎥";
+  return `<div class="quiz res" style="--c:${c};--c2:${c2}"><h2>Resultado</h2>
+    <div class="ring" style="--p:${p}"><div>${p}%</div></div>
+    <div class="stars">${"⭐".repeat(stars)}${"☆".repeat(3 - stars)}</div>
+    <p><b>${g} de ${n}</b> correctas · ${msg}</p>${extra || ""}<div class="row" style="justify-content:center;margin-top:14px">${btns || ""}</div></div>`;
+}
+
+function vTema(id){
+  const t = TEMAS.find(x => x.id === id); if (!t) return vEtapas();
+  const e = etapa(t.et); setTab("etapas"); setColor(e.color, e.color2);
+  const list = temasDe(t.et); const k = list.indexOf(t);
+  const prev = list[k - 1], next = list[k + 1];
+  const d = st(); const best = (d.temas[t.id] || {}).best;
+  app().innerHTML = `
+  <div class="thead"><span class="big">${t.icon}</span><div class="crumb"><a href="#/etapas">Etapas</a> › <a href="#/etapa/${e.n}">Etapa ${e.n}</a> › Tema ${e.n}.${k + 1}</div>
+    <h1 style="margin-top:6px">${cf(t.titulo)}</h1><div class="row"><span class="pill">📖 Libro ${t.pag}</span>${best !== undefined ? `<span class="pill">🏅 Tu mejor puntaje: ${best}%</span>` : ""}</div></div>
+  <div class="flash" style="margin-bottom:16px"><span class="lbl">⚡ En 30 segundos</span>${cf(t.resumen)}</div>
+  <div class="card"><div class="secttl"><span class="dot">1</span>Lo que debes saber</div><ul class="points">${t.puntos.map(p => `<li>${cf(p)}</li>`).join("")}</ul></div>
+  <div class="card"><div class="secttl"><span class="dot">2</span>Infografía</div>${t.info.map(renderInfo).join("")}</div>
+  <div class="tip" style="margin-bottom:16px"><b>🧠 Truco para el examen:</b> ${cf(t.truco)}</div>
+  <div class="card"><div class="secttl"><span class="dot">3</span>Videos recomendados en tu libro</div>
+    <div class="grid g2">${t.videos.map(v => `<a class="vid" href="${v.u}" target="_blank" rel="noopener"><span class="pl">▶</span><span><b>${esc(v.t)}</b><small>Se abre en una pestaña nueva</small></span></a>`).join("")}</div></div>
+  <div class="secttl" style="margin-top:20px"><span class="dot">4</span>¡Ponte a prueba! (${t.preguntas.length} preguntas)</div>
+  <div id="qz"></div>
+  <div class="pager">${prev ? `<a class="btn ghost sm" href="#/tema/${prev.id}">← ${cf(prev.titulo)}</a>` : `<span></span>`}${next ? `<a class="btn ghost sm" href="#/tema/${next.id}">${cf(next.titulo)} →</a>` : `<a class="btn ghost sm" href="#/etapas">Ver todas las etapas →</a>`}</div>`;
+  const start = () => runQuiz({qs: shuffle(t.preguntas), color: e.color, color2: e.color2, title: t.titulo.replace(/<[^>]+>/g, ""), mount: $("#qz"),
+    onFinish: (res, g) => {
+      const p = pct(g, res.length); const x = st(); const prevB = (x.temas[t.id] || {}).best || 0;
+      x.temas[t.id] = {best: Math.max(prevB, p), last: p, fecha: hoy()}; save(x);
+      $("#qz").innerHTML = resultCard(g, res.length, e.color, e.color2, reviewHTML(res),
+        `<button class="btn ghost" id="again">🔁 Reintentar</button>${next ? `<a class="btn c" href="#/tema/${next.id}">Siguiente tema →</a>` : `<a class="btn c" href="#/etapa/${e.n}">Volver a la etapa</a>`}`);
+      $("#again").onclick = start; if (p >= 80) burst();
+    }});
+  start();
+}
+
+function vDiagnostico(){
+  setTab("diagnostico"); setColor("#0b2350", "#f5b800");
+  const d = st();
+  const prevTxt = d.diag ? `<p class="muted">Ya hiciste el diagnóstico el ${d.diag.fecha} (${d.diag.total}/20). Puedes repetirlo o <a href="#/resultado">ver tu resultado</a>.</p>` : "";
+  app().innerHTML = `<div class="card"><h1>🎯 Examen diagnóstico</h1>
+    <p>20 preguntas generales: <b>5 por cada etapa</b>. Al responder cada una verás de inmediato si es correcta y <b>por qué</b>. Al final te diremos qué etapas dominas y cuáles debes estudiar primero.</p>
+    <div class="row"><span class="pill">⏱️ ~10 minutos</span><span class="pill">🔀 Opciones en orden aleatorio</span><span class="pill">📊 Resultado por etapa</span></div>${prevTxt}
+    <div class="row" style="margin-top:12px"><button class="btn gold" id="go">¡Comenzar! 🚀</button></div></div><div id="dq"></div>`;
+  $("#go").onclick = () => {
+    $("#go").closest(".card").style.display = "none";
+    const qs = [1, 2, 3, 4].flatMap(n => shuffle(DIAGNOSTICO.filter(q => q.et === n)));
+    runQuiz({qs, color: "#0b2350", color2: "#f5b800", title: "Diagnóstico", mount: $("#dq"),
+      onFinish: (res, g) => {
+        const por = {1:0, 2:0, 3:0, 4:0}; res.forEach(r => { if (r.ok) por[r.q.et]++; });
+        const x = st(); x.diag = {total: g, por, fecha: hoy(), res: res.map(r => ({et: r.q.et, ok: r.ok}))}; save(x);
+        location.hash = "#/resultado";
+      }});
+  };
+}
+
+function vResultado(){
+  setTab("diagnostico"); setColor("#0b2350", "#f5b800");
+  const d = st(); if (!d.diag) return vDiagnostico();
+  const D = d.diag; const ord = ETAPAS.slice().sort((a, b) => D.por[a.n] - D.por[b.n]);
+  app().innerHTML = resultCard(D.total, 20, "#0b2350", "#f5b800",
+    `<div class="ebars" style="max-width:560px;margin:14px auto">${ETAPAS.map(e => { const p = pct(D.por[e.n], 5);
+      return `<div class="r"><span class="lb">Etapa ${e.n}</span><div class="bar dark" style="--c:${e.color}"><i style="width:${p}%"></i></div><span class="v">${D.por[e.n]}/5</span> <span class="sem ${lvl(p)}">${lvlTxt(p)}</span></div>`; }).join("")}</div>
+     <div class="card" style="text-align:left;box-shadow:none;border:2px solid var(--line)"><h3>🧭 Tu ruta de estudio</h3>
+      <ol style="padding-left:20px;margin:0">${ord.map(e => { const p = pct(D.por[e.n], 5);
+        return `<li style="margin:6px 0"><a href="#/etapa/${e.n}" style="font-weight:700;color:${e.color}">Etapa ${e.n}: ${e.titulo}</a> — <span class="sem ${lvl(p)}">${lvlTxt(p)}</span><br><small class="muted">${p >= 80 ? "Haz el mini simulacro de la etapa para confirmarlo." : p >= 60 ? "Repasa los temas y practica las preguntas donde fallaste." : "Empieza aquí: lee cada tema, mira los videos y responde las preguntas."}</small></li>`; }).join("")}</ol></div>`,
+    `<a class="btn gold" href="#/etapa/${ord[0].n}">Empezar por la Etapa ${ord[0].n} →</a><button class="btn ghost" id="pr">🖨️ Constancia (PDF)</button><a class="btn ghost" href="#/diagnostico">🔁 Repetir</a>`);
+  $("#pr").onclick = () => printConst();
+  if (D.total >= 16) burst();
+}
+
+function vSimulacro(){
+  setTab("simulacro"); setColor("#d71920", "#f5b800");
+  const n = PREGUNTAS_SIMULACRO_POR_ETAPA;
+  app().innerHTML = `<div class="card"><h1>🏁 Simulacro del examen global</h1>
+    <p><b>${n * 4} preguntas</b> tomadas al azar de los ${TEMAS.length} temas (${n} por etapa). Cada vez que lo hagas te saldrán preguntas diferentes. Respóndelo como si fuera el examen real: sin apuntes 😉</p>
+    <div class="row"><button class="btn" style="background:var(--red)" id="go">Iniciar simulacro</button></div></div><div id="sq"></div>`;
+  $("#go").onclick = () => {
+    $("#go").closest(".card").style.display = "none";
+    const qs = [1, 2, 3, 4].flatMap(et => shuffle(temasDe(et).flatMap(t => t.preguntas.map(q => ({...q, et})))).slice(0, n));
+    const t0 = Date.now();
+    runQuiz({qs: shuffle(qs), color: "#d71920", color2: "#f5b800", title: "Simulacro global", mount: $("#sq"),
+      onFinish: (res, g) => {
+        const por = {1:0, 2:0, 3:0, 4:0}; res.forEach(r => { if (r.ok) por[r.q.et]++; });
+        const min = Math.max(1, Math.round((Date.now() - t0) / 60000));
+        const x = st(); x.sims.push({fecha: hoy(), g, n: res.length, por, min}); save(x);
+        $("#sq").innerHTML = resultCard(g, res.length, "#d71920", "#f5b800",
+          `<p class="muted">Tiempo: ${min} min</p><div class="ebars" style="max-width:520px;margin:10px auto">${ETAPAS.map(e => { const p = pct(por[e.n], n);
+            return `<div class="r"><span class="lb">Etapa ${e.n}</span><div class="bar dark" style="--c:${e.color}"><i style="width:${p}%"></i></div><span class="v">${por[e.n]}/${n}</span></div>`; }).join("")}</div>${reviewHTML(res)}`,
+          `<button class="btn" style="background:var(--red)" onclick="vSimulacro()">🔁 Otro simulacro</button><button class="btn ghost" id="pr">🖨️ Constancia (PDF)</button>`);
+        $("#pr").onclick = () => printConst();
+        if (pct(g, res.length) >= 80) burst();
+      }});
+  };
+}
+
+function vProgreso(){
+  setTab("progreso"); setColor();
+  const d = st();
+  const rows = TEMAS.map(t => { const r = d.temas[t.id]; return `<tr><td>${t.et}</td><td>${cf(t.titulo)}</td><td>${r ? `<span class="score ${lvl(r.best)}">${r.best}%</span>` : "—"}</td><td class="muted">${r ? r.fecha : ""}</td></tr>`; }).join("");
+  const totalDone = TEMAS.filter(t => (d.temas[t.id] || {}).best >= 70).length;
+  app().innerHTML = `<h1>📊 Mi progreso</h1>
+    <div class="grid g3">
+      <div class="card"><b>Temas superados (≥ 70%)</b><div style="font:800 2rem Poppins">${totalDone}/${TEMAS.length}</div><div class="bar dark"><i style="width:${pct(totalDone, TEMAS.length)}%"></i></div></div>
+      <div class="card"><b>Diagnóstico</b><div style="font:800 2rem Poppins">${d.diag ? d.diag.total + "/20" : "—"}</div><small class="muted">${d.diag ? d.diag.fecha : "Aún no lo haces"}</small></div>
+      <div class="card"><b>Simulacros</b><div style="font:800 2rem Poppins">${d.sims.length}</div><small class="muted">${d.sims.length ? "Último: " + d.sims[d.sims.length - 1].g + "/" + d.sims[d.sims.length - 1].n : "Aún no haces ninguno"}</small></div></div>
+    <div class="card" style="overflow-x:auto"><h3>Puntaje por tema (mejor intento)</h3><table class="t" style="--c:#16357a"><tr><th>Etapa</th><th>Tema</th><th>Mejor</th><th>Fecha</th></tr>${rows}</table></div>
+    <div class="row"><button class="btn" id="pr">🖨️ Imprimir / guardar constancia</button><button class="btn ghost" id="rs">🗑️ Borrar mi progreso</button></div>
+    <p class="muted" style="font-size:.85rem">Tu progreso se guarda solo en este dispositivo y navegador.</p>`;
+  $("#pr").onclick = () => printConst();
+  $("#rs").onclick = () => { if (confirm("¿Seguro que quieres borrar todo tu progreso?")) { save({}); vProgreso(); } };
+}
+
+function printConst(){
+  const d = st(); const D = d.diag; const last = d.sims[d.sims.length - 1];
+  $("#printArea").innerHTML = `
+    <div style="display:flex;align-items:center;gap:14px;border-bottom:3px solid #0b2350;padding-bottom:8px">
+      <img src="${LOGO_UANL}" style="height:70px"><div style="flex:1;text-align:center"><b>Universidad Autónoma de Nuevo León</b><br>Preparatoria No. 1 «Colegio Civil»<br><b>Constancia de repaso — La Materia y sus Transformaciones (Examen global)</b></div><img src="${LOGO_P1}" style="height:70px"></div>
+    <p><b>Alumno:</b> ${esc(d.alumno.nombre || "________________________")} &nbsp; <b>Grupo:</b> ${esc(d.alumno.grupo || "_____")} &nbsp; <b>Fecha:</b> ${hoy()}</p>
+    <h3>Examen diagnóstico</h3>${D ? `<table><tr><th>Etapa</th><th>Aciertos</th><th>Nivel</th></tr>${ETAPAS.map(e => `<tr><td>Etapa ${e.n}. ${e.titulo}</td><td>${D.por[e.n]}/5</td><td>${lvlTxt(pct(D.por[e.n], 5))}</td></tr>`).join("")}<tr><td><b>Total</b> (${D.fecha})</td><td><b>${D.total}/20</b></td><td>${pct(D.total, 20)}%</td></tr></table>` : "<p>No realizado.</p>"}
+    <h3>Práctica por tema (mejor intento)</h3><table><tr><th>Tema</th><th>Puntaje</th></tr>${TEMAS.filter(t => d.temas[t.id]).map(t => `<tr><td>${t.et}. ${cf(t.titulo)}</td><td>${d.temas[t.id].best}%</td></tr>`).join("") || "<tr><td colspan=2>Sin registros</td></tr>"}</table>
+    <h3>Simulacros</h3>${d.sims.length ? `<table><tr><th>Fecha</th><th>Aciertos</th><th>%</th></tr>${d.sims.map(s => `<tr><td>${s.fecha}</td><td>${s.g}/${s.n}</td><td>${pct(s.g, s.n)}%</td></tr>`).join("")}</table>` : "<p>No realizado.</p>"}
+    <p style="margin-top:30px;font-size:10pt;color:#555">Documento generado por la página de repaso de la Academia de Química. Registro de autoestudio del alumno.</p>`;
+  window.print();
+}
+
+// ================================================================
+//  Router
+// ================================================================
+function route(){
+  const h = location.hash.replace(/^#\/?/, "").split("/");
+  window.scrollTo(0, 0);
+  switch (h[0]){
+    case "diagnostico": return vDiagnostico();
+    case "resultado": return vResultado();
+    case "etapas": return vEtapas();
+    case "etapa": return vEtapa(+h[1]);
+    case "tema": return vTema(h[1]);
+    case "simulacro": return vSimulacro();
+    case "progreso": return vProgreso();
+    default: return vInicio();
+  }
+}
+function countdown(){
+  const el = $("#count"); if (!FECHA_EXAMEN){ el.style.display = "none"; return; }
+  const ms = new Date(FECHA_EXAMEN + "T07:00:00") - new Date();
+  const days = Math.ceil(ms / 86400000);
+  el.textContent = days > 1 ? `⏳ Faltan ${days} días` : days === 1 ? "⏳ ¡Mañana es el examen!" : days === 0 ? "🍀 ¡Hoy es el examen!" : "✅ Semana de global";
+}
+window.addEventListener("hashchange", route);
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("img[data-logo]").forEach(i => i.src = i.dataset.logo === "uanl" ? LOGO_UANL : LOGO_P1);
+  route();
+});
+
+</script>
+</body>
+</html>
